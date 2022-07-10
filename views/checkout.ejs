@@ -4,28 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/stylesheets/styleCheckout.css">
+    <link rel="stylesheet" href="../stylesheets/styleCheckout.css">
+    <link rel="stylesheet" href="../stylesheets/styleHeader.css">	
     <title>Checkout</title>
 </head>
 <body>
-    <header class="'header">
-        <div class="logo ">
-          <img src="../public/images/LOGO CAMISETERIA.png" alt="logo colorido" id="logo">
-        </div>
-    </header>
+
+  <%- include('./partials/header')%>
+
+<main>
+
 <div class="container"> 
     <div class="title">
         <h2>Dados de Contato/Entrega</h2>
     </div>
+  </div>
+
   <div class="d-flex">
     <form action="" method="">
       <label>
-        <span class="fname">E-mail<span class="required">*</span></span>
-        <input type="text" name="fname">
+        <span class="email">E-mail<span class="required">*</span></span>
+        <input type="text" name="email">
       </label>
       <label>
-        <span class="lname">Nome do Destinatário<span class="required">*</span></span>
-        <input type="text" name="lname">
+        <span class="nome">Nome do Destinatário<span class="required">*</span></span>
+        <input type="text" name="nome">
       </label>
       <label>
         <span>País<span class="required">*</span></span>
@@ -62,13 +65,13 @@
       </label>
     </form>
     <div class="Pedido">
-      <table>
+      <table class="boxPedido">
         <tr>
           <th colspan="2">Pedido</th>
         </tr>
         <tr>
-          <td>Camiseta (M) - x1</td>
-          <td>R$59,90</td>
+          <td>Camiseta Lisa Branca (M) - x1</td>
+          <td>R$49,99</td>
         </tr>
         <tr>
           <td>Frete</td>
@@ -76,14 +79,17 @@
         </tr>
         <tr>
           <td>TOTAL</td>
-          <td>R$59,90</td>
+          <td>R$49,99</td>
         </tr>
       </table><br>
       <button type="button">Continuar para pagamento</button>
     </div>
    </div>
   </div>
-  
-<%- include('./partials/footer') %>   
+
+</main>
+
+<%- include('./partials/footer')%>   
 
 </body>
+</html>
