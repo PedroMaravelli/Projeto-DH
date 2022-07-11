@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/styleProdutos.css">
+	<link rel="stylesheet" href="../stylesheets/styleHeader.css">	
+    <title>Camiseteria</title>
+</head>
+<body>
+	<%- include('./partials/header') %>
+    <main>
+        <section class="titulo-cadastro">			
+			<h1>
+				PRODUTOS
+			</h1>
+		</section>
+		<section class="area-produtos">			
+			<section class="menu-lateral-produtos">
+				<h3>FILTRAR POR:</h3>
+				<div class="caixa-filtro-lateral">
+					<div class="box-titulo">
+						<div class="caixa-cor-titulo">							
+						</div>				
+						<h2>CATEGORIAS</h2>
+					</div>										
+					<p class="p-filtro">camisetas masculinas</p>
+					<p class="p-filtro">camisetas femininas</p>
+				</div>
+				<div class="caixa-filtro-lateral">
+					<div class="box-titulo">
+						<div class="caixa-cor-titulo">							
+						</div>				
+						<h2>CORES</h2>
+					</div>
+					<p class="p-filtro">branco</p>
+					<p class="p-filtro">preto</p>
+					<p class="p-filtro">azul</p>
+					<p class="p-filtro">rosa</p>
+				</div>
+				<div class="caixa-filtro-lateral">
+					<div class="box-titulo">
+						<div class="caixa-cor-titulo">							
+						</div>				
+						<h2>TAMANHOS</h2>
+					</div>
+					<p class="p-filtro">PP</p>
+					<p class="p-filtro">P</p>
+					<p class="p-filtro">M</p>
+					<p class="p-filtro">G</p>
+					<p class="p-filtro">GG</p>
+				</div>
+				<div class="caixa-filtro-lateral">
+					<div class="box-titulo">
+						<div class="caixa-cor-titulo">							
+						</div>				
+						<h2>FAIXA DE PREÇO</h2>
+					</div>
+					<form action="get">
+					<label for="text">De:</label>
+					<input type="text" class="text">
+					<label for="text">Até:</label>
+					<input type="text" class="text">
+					<button type="submit">Filtrar</button>
+					</form>				
+				</div>
+			</section>  
+			<section class="area-produtos-principal">
+				<div class="produtos-cards">
+					<article class="produtosCard">
+						<article class="elementosCards">
+							<div class="imagemProdutosCard">
+								<img src="./images/camiseta-branca.webp">
+							</div>
+							<div class="elementosCards">
+								<p>Camiseta Lisa Branca</p>
+								<p>R$49.99</p>
+							</div>
+							<button type="submit">Comprar</button>
+					</article>
+					<article class="elementosCards">
+						<div class="imagemProdutosCard">
+							<img src="./images/camiseta-azul.jpg">
+						</div>
+						<div class="elementosCards">
+							<p>Camiseta Lisa Branca</p>
+							<p>R$49.99</p>
+						</div>
+						<button type="submit">Comprar</button>
+					</article>		
+					<article class="elementosCards">
+						<div class="imagemProdutosCard">
+							<img src="./images/camiseta-cinza.webp">
+						</div>
+						<div class="elementosCards">
+							<p>Camiseta Lisa Branca</p>
+							<p>R$49.99</p>
+						</div>
+						<button type="submit">Comprar</button>		
+					</article>		
+				</div>	
+				<div class="produtos-cards">
+					<article class="produtosCard">
+						<article class="elementosCards">
+							<div class="imagemProdutosCard">
+								<img src="./images/camiseta-fem-azul.jpg">
+							</div>
+							<div class="elementosCards">
+								<p>Camiseta Feminina Azul</p>
+								<p>R$39.99</p>
+							</div>
+							<button type="submit">Comprar</button>
+						</article>		
+						<article class="elementosCards">
+							<div class="imagemProdutosCard">
+								<img src="./images/camiseta-feminina-rosa.jpg">
+							</div>
+							<div class="elementosCards">
+								<p>Camiseta Feminina Rosa</p>
+								<p>R$39.99</p>
+							</div>
+							<button type="submit">Comprar</button>
+						</article>
+						<article class="elementosCards">
+							<div class="imagemProdutosCard">
+								<img src="./images/camiseta-feminina.jpg">
+							</div>
+							<div class="elementosCards">
+								<p>Camiseta Feminina Branca</p>
+								<p>R$39.99</p>
+							</div>
+							<button type="submit">Comprar</button>
+						</article>	
+					</article>
+				</div>								
+			</section>			
+		</section>
+    </main>
+	<%- include('./partials/footer') %>    
+</body>
+</html>
+
+				
+
+				
+			
+		
+
+        
+
+        
+					
+                
+
+                
+					
+					
+
+                
+					
+					
+
+                
+
+
+                    
+            
+
+
+
+        
+
+							

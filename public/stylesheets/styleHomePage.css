@@ -89,7 +89,7 @@ main{
 }
 .imagemProdutosCard img{
     width: 260px;
-    height: 300px;
+    height: auto;
 }
 .containerpaicadastroemail{
     display: flex;
@@ -207,6 +207,7 @@ body footer{
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 50px;
+    padding-bottom: 50px;
     display: flex;
     justify-content: space-between;
     background-color: rgb(234, 234, 234);
