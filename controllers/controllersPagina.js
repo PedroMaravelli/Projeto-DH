@@ -1,4 +1,4 @@
-const controllersHomePage = {
+const controllersPagina = {
     home: (req,res) =>{
     res.render('homePage')
     },
@@ -7,4 +7,4 @@ const controllersHomePage = {
     }
 }
 
-module.exports = controllersHomePage
+module.exports = controllersPagina
