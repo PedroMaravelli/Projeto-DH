@@ -9,4 +9,10 @@ router.get('/produtos', controllersPagina.produtos)
 router.get('/login', controllersPagina.login)
 
 
+
+
+
+
+
+
 module.exports = router;
