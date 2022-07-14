@@ -1,10 +1,8 @@
 var express = require('express');
-const controllersHomePage = require('../controllers/controllersPagina');
 var router = express.Router();
+
 const controllersPagina = require('../controllers/controllersPagina')
 const controllersCheckout = require('../controllers/controllersCheckout')
-const controllersCarrinho = require('../controllers/controllersCarrinho')
-
 const controllersCarrinho = require('../controllers/controllersCarrinho')
 
 router.get('/', controllersPagina.home)

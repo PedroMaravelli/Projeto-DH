@@ -6,20 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../stylesheets/stylesCarrinho.css">
     <link rel="stylesheet" href="../stylesheets/styleCadastro.css">
-
-
+    <link rel="stylesheet" href="../stylesheets/styleHeader.css">
     <title>Carrinho</title>
 </head>
 <body>
-    <header>
-
-    </header>
-    <main >
+    <%- include('./partials/header') %>
+    <main>
         <section class="titulo-botao">
                 <h1>MEU CARRINHO</h1>
                 <button type="submit">CONTINUAR COMPRANDO</button>
-            
-
         </section>
         <section class="produtosCarrinho">
             
@@ -62,7 +57,7 @@
                     <p>TOTAL</p>
                     <p>R$ 59,99</p>
                 </div>
-                <button type="button" id="buttonCarrinho">FINALIZAR PEDIDO</button>
+                <a href="/checkout"><button type="button" id="buttonCarrinho">FINALIZAR PEDIDO</button></a>
             </article>
         
     </main>
