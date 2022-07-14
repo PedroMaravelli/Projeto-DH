@@ -28,6 +28,7 @@ p{
     font-weight: 400;
 }
 /* Seção header da página de cadastro */
+
 body header .header-cadastro{    
     display: flex;    
     justify-content: space-between;
@@ -54,36 +55,47 @@ body header .texto-header-cadastro p{
     font-size: 14px;
 }
 /* Seção main da página de cadastro */
-body main .titulo-cadastro{
+
+body main .titulo-login{
     display: flex;
     justify-self: center;
     margin-left: 15%;
     margin-right: 15%;
     border-bottom: 1px solid #bcbcbc;
-    
 }
-body main .titulo-cadastro h1{
+
+body main .titulo-login h1{
     display: flex;
     margin: auto;    
     margin-bottom: 30px;
 }
-body main .dados-formulario{
+
+body main .corpo-formulario{
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 50px;
     display: flex;
 }
+
 body main .formulario-cadastro{
     width: 100%;
     display: flex;
     flex-direction: column;
 }
+
 body main .linha-formulario{
     display: flex;
     margin-bottom: 10px;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
 }
+
+.esqueceu-senha{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: left;
+    margin-left: 155px;
+}
+
 body main .formulario-cadastro label{
     font-family: 'Montserrat';
     font-weight: 500;
@@ -96,20 +108,7 @@ body main .formulario-cadastro input{
     border-radius: 10px;
     border: none;
 }
-body main .campo-formulario-cadastro#campo-esquerdo{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    padding-left: 15%;
-    padding-right: 2%;
-}
-body main .campo-formulario-cadastro#campo-direito{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    padding-left: 2%;
-    padding-right: 15%;
-}
+
 body main .campo-formulario-cadastro#campo-linhaunica{
     display: flex;
     flex-direction: column;
@@ -117,42 +116,29 @@ body main .campo-formulario-cadastro#campo-linhaunica{
     padding-left: 15%;
     padding-right: 15%;
 }
-body main #select-form{
-    height: 50px;
-    background: #F3F1F1;
-    border-radius: 10px;
-    border: none;
-    font-family: 'Montserrat';
-}
+
 body main .campo-formulario-cadastro#campo-linhaunica-senha{
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-left: 30%;
-    padding-right: 30%;
+    padding-left: 15%;
+    padding-right: 15%;
 }
-#checkbox{
-    margin: 5px;
-}
-body main .linha-formulario#texto-final-formulario{
-    display: flex;
-    width: 100%;
-    padding-left: 30%;
-    padding-right: 30%;
-    justify-content: flex-start;
-}
+
 body main .campo-formulario-cadastro#campo-linhaunica-senha button{
-    width: 399px;
+    width: 50%;
     background: #6699FF;
     height: 50px;
     border-radius: 10px;
     border: none;
     font-family: 'Montserrat';
     color: white;
-    margin-bottom: 150px;
+    margin-bottom: 10px;
+    margin-left: 358px;
 }
+
 body main .campo-formulario-cadastro#campo-linhaunica-senha button:hover{
-    width: 399px;
+    width: 50%;
     background: #2a71ff;
     height: 50px;
     border-radius: 10px;
@@ -160,6 +146,14 @@ body main .campo-formulario-cadastro#campo-linhaunica-senha button:hover{
     font-family: 'Montserrat';
     color: white;
     cursor: pointer;
+    margin-left: 358px;
+}
+
+.nao-tem-conta{
+    display: flex;
+    margin-bottom: 150px;
+    justify-content: right;
+    margin-right: 155px;
 }
 
 /* Seção Footer */
@@ -167,7 +161,6 @@ body footer{
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 50px;
-    padding-bottom: 50px;
     display: flex;
     justify-content: space-between;
     background-color: rgb(234, 234, 234);

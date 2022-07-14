@@ -1,0 +1,165 @@
+/* Fontes do projeto */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Montserrat'
+}
+
+/*carrinho*/
+
+main{
+    margin: 0px 10%;
+}
+
+.titulo-botao{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 5px solid #D9D9D9;
+    margin-bottom: 10%;
+}
+.titulo-botao h1{
+    font-size: 36px;
+    font-family: 'Montserrat';
+}
+.titulo-botao button{
+    font-family: 'Montserrat';
+    width: 200px;
+    height: 60px;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color:#6699ff ;
+    border: none;
+}
+
+
+.produtosCarrinho{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 350px;
+    justify-content: space-between;
+    border-bottom: 2px solid #D9D9D9;
+    
+}
+
+#imagemProduto{
+    width: 260px;
+    height: auto;
+}
+.descricaoProduto{
+    display: flex;
+    flex-direction: column;
+    margin-right: 40%;
+    margin-top: 5%;
+    font-size: 22px;
+}
+.precoProdutoCarrinho {
+    margin-top: 10%;
+    
+}
+.precoProdutoCarrinho p{
+    font-size: 32px;
+    font-weight: bold;
+
+}
+.frete{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    height: 300px;
+    justify-content: space-between;
+}
+.freteCarrinho{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.freteCarrinho form{
+    display: flex;
+    flex-direction: column;
+}
+.freteCarrinho form input{
+    height: 40px;
+    margin-bottom:10% ;
+    width: 250px;
+    
+}
+.freteCarrinho label{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15%;
+}
+#buttonCarrinho{
+    width: 200px;
+    height: 50px;
+    background-color: #6699ff;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+.naoSeiMeuCep {
+    display: flex;
+    width: 300px;
+    margin-left: 3%;
+    font-size: 15px;
+}
+
+.valorDoPedido{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    margin-top: 10%;
+}
+
+
+
+.resumoDoPedido p{
+    margin-bottom: 10%;
+    font-size: 24px;
+    font-weight: bold;
+    height: 30px;
+    
+}
+.subtotalCarrinho{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:5%;
+    border-top: black 1px solid;
+    border-bottom: black 1px solid;
+    height: 40px;
+}
+
+.totalDoPedido{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40px;
+    margin-bottom: 5%;
+    justify-content: space-between;
+
+}
+.totalDoPedido p{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+
+
+
+
+

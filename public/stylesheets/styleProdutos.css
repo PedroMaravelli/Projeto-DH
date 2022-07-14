@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    display: flex;
+    flex-direction: column;    
+}
+body main section h3{
+    width: 100%;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    color: #c4c4c4;
+}
+body main section.titulo-cadastro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+body main section.area-produtos{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+body main section.menu-lateral-produtos{
+    height: 100%;     
+    width: 20%; 
+    z-index: 1;
+    left: 0;
+}
+body main section div.caixa-filtro-lateral{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    border-bottom: 1px solid #dddddd;    
+}
+body main section div div.box-titulo{
+    display: flex;
+}
+body main section div div div.caixa-cor-titulo{
+    display: flex;
+    align-self: center;
+    width:6px;
+    height: 70%;
+    margin-right: 5px;    
+    background-color:#dddddd;
+}
+body main section div p.p-filtro{
+    font-size: 12px;
+    padding: 3px;
+    color: #c4c4c4;
+}
+body main section div p.p-filtro:hover{
+    cursor: pointer;
+    font-size: 12px;
+    padding: 3px;
+    color:black;
+}
+body main section form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+body main section div label{
+    font-family: 'Montserrat';
+    margin-left: 10px;
+}
+body main section div input{
+    width: 50px;
+}
+body main section div button{
+    width: 50px;
+    height: 20px;
+    margin-left: 10px;
+    background-color: #6699ff;
+    border: none;
+    border-radius: 2px;
+    font-family: 'Montserrat';
+}
+body main section.area-produtos-principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin-bottom: 50px;
+}
+body main section div.produtos-cards{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px;
+}
+.tituloSecaoHome button{
+    width: 20px;
+    height: 60px;
+    margin-right: 7%;
+    background-color: #6699ff;
+    border: none;
+}
+.elementosCards{
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    align-items: center;
+}
+.elementosCards button{
+    background-color: #6699ff;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    border: none;
+    width: 120px;
+    height: 40px;
+    margin-top: 5%;
+}
+.elementosCards button:hover{
+    color: #D9D9D9;
+}
+.produtosCard{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    
+}
+.imagemProdutosCard img{
+    width: 260px;
+    height: auto;
+}
+/*footer*/
+
+body footer{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(234, 234, 234);
+}
+body footer .secao-footer{
+    width: 25%;
+    padding-right: 5%;    
+}
+body footer .secao-footer h3{
+    margin-bottom: 10px; 
+    font-weight: 600;  
+}
+body footer .secao-footer a{
+    text-decoration: none; 
+    color: black;   
+}
+body footer article img{
+    height: 50px;
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+body footer article div.secao-footer-social{
+    display: flex;
+    width: 25%;    
+}
+body footer article div img{
+    height: 40px;
+    margin-right: 10px;
+}
+body footer article form.form-footer{
+    display: flex;
+    flex-direction: column;
+}
+body footer article form.form-footer label{
+    font-family: 'Montserrat';
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+body footer article form.form-footer input{
+    height: 30px;
+    background: #F3F1F1;
+    border-radius: 10px;
+    border: none;
+}
+body footer article form.form-footer textarea{
+    height: 120px;
+    background: #F3F1F1;
+    border-radius: 10px;
+    border: none;
+}
+body footer article form.form-footer button{
+    background: #6699FF;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+    font-family: 'Montserrat';
+    color: white;
+}
+body footer article form.form-footer button:hover{
+    background: #2a71ff;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+    font-family: 'Montserrat';
+    color: white;
+    cursor: pointer;
+}
