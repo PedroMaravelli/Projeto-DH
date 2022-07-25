@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<
     <link rel="stylesheet" href="../stylesheets/styleProdutos.css">
 	<link rel="stylesheet" href="../stylesheets/styleHeader.css">	
     <title>Camiseteria</title>
@@ -69,69 +71,39 @@
 			<section class="area-produtos-principal">
 				<div class="produtos-cards">
 					<article class="produtosCard">
+
+					<% for(let produto of produtos) { %>
+
 						<article class="elementosCards">
 							<div class="imagemProdutosCard">
 								<img src="./images/camiseta-branca.webp">
 							</div>
 							<div class="elementosCards">
-								<p>Camiseta Lisa Branca</p>
-								<p>R$49.99</p>
+								<p><%=produto.nome%></p>
+								<p>R$<%=produto.valor%></p>
 							</div>
 							<button type="submit">Comprar</button>
-					</article>
-					<article class="elementosCards">
-						<div class="imagemProdutosCard">
-							<img src="./images/camiseta-azul.jpg">
-						</div>
-						<div class="elementosCards">
-							<p>Camiseta Lisa Branca</p>
-							<p>R$49.99</p>
-						</div>
-						<button type="submit">Comprar</button>
-					</article>		
-					<article class="elementosCards">
-						<div class="imagemProdutosCard">
-							<img src="./images/camiseta-cinza.webp">
-						</div>
-						<div class="elementosCards">
-							<p>Camiseta Lisa Branca</p>
-							<p>R$49.99</p>
-						</div>
-						<button type="submit">Comprar</button>		
-					</article>		
+						</article>
+					<% } %>
+
+
 				</div>	
 				<div class="produtos-cards">
 					<article class="produtosCard">
+
+					<% for(let produto of produtosfem) { %>
 						<article class="elementosCards">
 							<div class="imagemProdutosCard">
 								<img src="./images/camiseta-fem-azul.jpg">
 							</div>
 							<div class="elementosCards">
-								<p>Camiseta Feminina Azul</p>
-								<p>R$39.99</p>
+								<p><%=produto.nome%></p>
+								<p>R$<%=produto.valor%></p>
 							</div>
 							<button type="submit">Comprar</button>
 						</article>		
-						<article class="elementosCards">
-							<div class="imagemProdutosCard">
-								<img src="./images/camiseta-feminina-rosa.jpg">
-							</div>
-							<div class="elementosCards">
-								<p>Camiseta Feminina Rosa</p>
-								<p>R$39.99</p>
-							</div>
-							<button type="submit">Comprar</button>
-						</article>
-						<article class="elementosCards">
-							<div class="imagemProdutosCard">
-								<img src="./images/camiseta-feminina.jpg">
-							</div>
-							<div class="elementosCards">
-								<p>Camiseta Feminina Branca</p>
-								<p>R$39.99</p>
-							</div>
-							<button type="submit">Comprar</button>
-						</article>	
+					<% } %>
+						
 					</article>
 				</div>								
 			</section>			

@@ -11,7 +11,7 @@ const controllersPagina = {
         res.render('cadastro')
     },
     produtos: (req,res) => {
-        res.render('produtos')
+        res.render('produtos', {produtos: produtosMasculinos , produtosfem: produtosFemininos})
     },
     login: (req,res) => {
         res.render('login')
