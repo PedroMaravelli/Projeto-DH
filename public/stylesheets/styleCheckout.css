@@ -6,101 +6,135 @@
   box-sizing: border-box;
 }
 main {
+  font-family: 'Montserrat';
   margin-left: 10%;
   margin-right: 10%;
   
 }
   body{
+    font-family: 'Montserrat';
     color: #262626;
     
   }
   .container{
+    font-family: 'Montserrat';
     width: 100%;    
     align-self: center;
     border: 1px solid #dadada;
+    border-radius: 12px;
   }
   .d-flex{
+    font-family: 'Montserrat';
     flex-direction: row;
     border-radius: 0 0 5px 5px;
     padding: 25px;
   }
   form{
+    font-family: 'Montserrat';
     flex: 4;
   }
   .Pedido{
+    font-family: 'Montserrat';
     flex: 2;
   }
   
   h2{
+    font-family: 'Montserrat';
     align-items: center;
     font-size: 50px;
     font-weight: 750;
     line-height: 82px;
     text-align: center;
     color:#000;
+    border-radius: 12px;
   }
   .required{
     color: red;
   }
   label, table{
+    font-family: 'Montserrat';
     display: block;
     margin: 15px;
+    border-radius: 2px;
   }
   label>span{
+    font-family: 'Montserrat';
     float: left;
     width: 25%;
     margin-top: 12px;
     padding-right: 10px;
+    border-radius: 2px;
   }
   input[type="text"], input[type="tel"], input[type="email"], select
   {
+    font-family: 'Montserrat';
     width: 70%;
     height: 30px;
     padding: 5px 10px;
     margin-bottom: 10px;
     border: 1px solid #dadada;
     color: #000;
+    border-radius: 10px;
   }
   select{
+    font-family: 'Montserrat';
     width: 72%;
     height: 45px;
     padding: 5px 10px;
     margin-bottom: 10px;
+    border-radius: 12px;
   }
   .Pedido{
+    font-family: 'Montserrat';
     margin-top: 15px;
     height: 600px;
     padding: 20px;
-    border: 1px solid #dadada;
+    border: 1px solid hsl(0, 0%, 85%);
     align-content: center;
+    border-radius: 12px;
   }
   
   table{
-    padding-left: 30%;
-    padding-right: 30%;
+    font-family: 'Montserrat';
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: auto;
+    justify-content: space-around;
+    
   }
   th{
+    font-family: 'Montserrat';
     border-bottom: 1px solid #dadada;
     padding: 10px;
+    
   }
   tr>td:nth-child(1){
     text-align: left;
     color: #000;
+
   }
   tr>td:nth-child(2){
+    font-family: 'Montserrat';
     text-align: right;
     color: #000;
+  
   }
   td{
+    font-family: 'Montserrat';
     border-bottom: 1px solid #dadada;
     padding: 25px 25px 25px 0;
+
   }
 
   .Pedido>div{
+    font-family: 'Montserrat';
     padding: 5px 0; 
+    border-radius: 12px;
   }
   
   button{
+    font-family: 'Montserrat';
     width: 100%;
     margin-top: 10px;
     padding: 10px;
@@ -112,8 +146,10 @@ main {
     font-weight: bold;
   }
   button:hover{
+    font-family: 'Montserrat';
     cursor: pointer;
     background: #6699ff;
+    border-radius: 12px;
   
 }
 
