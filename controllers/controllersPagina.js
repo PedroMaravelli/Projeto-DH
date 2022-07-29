@@ -15,6 +15,9 @@ const controllersPagina = {
     cadastro: (req,res) => {
         res.render('cadastro')
     },
+    cadastroProdutos: (req,res) =>{
+        res.render('cadastroProdutos')
+    },
 
 
 

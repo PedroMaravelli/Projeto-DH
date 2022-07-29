@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/styleHomePage.css">
+	<link rel="stylesheet" href="../stylesheets/styleHeader.css">	
+	<link rel="stylesheet" href="../stylesheets/styleCadastroProdutos.css">	
+
+
+
+    <title>Cadastro de Produtos</title>
+</head>
+<body>
+	<%- include('./partials/header') %>
+
+    <main>
+        <section class="tituloCadastroDeProdutos">
+            <h1>CADASTRO DE PRODUTOS</h1>
+        </section>
+
+
+        <form action="/admin/cadastro" method="post">
+            <section class="campoFormularioProdutos">
+                <article class="campoInputProdutos">
+                    <label for="nomeProduto">NOME DO PRODUTO *</label>
+                    <input type="text" name="nomeProduto" id="nomeProduto">
+                </article>
+                <article class='campoInputProdutos'>
+                    <label for="precoProduto">PREÇO DO PRODUTO *</label>
+                    <input type="number" name="precoProduto" id="precoProduto">
+                </article>
+            </section>
+
+            <section class="campoFormularioProdutos">
+
+                <article class="campoInputProdutos">
+                    <label for="idProduto">ID DO PRODUTO *</label>
+                    <input type="number" name="idProduto" id="idProduto">
+                </article>
+
+                <article class="campoInputProdutos">
+                    <label for="cor">COR DO PRODUTO *</label>
+                    <input type="text" name="cor" id="cor">
+                </article>  
+
+            </section>
+
+            <section class="campoFormularioProdutos">
+                <article class="campoInputProdutos">
+                    <label for="estoque">QUANTIDADE EM ESTOQUE *</label>
+                    <input type="number" name="estoque" id="estoque">
+                </article>
+
+                <article class="campoInputProdutos">
+                    <label for="classificacao">CLASSIFICAÇÃO *</label>
+                    <select name="classificacao">
+                        <option value="selecione" selected disabled>Selecione</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+
+                    </select>
+                </article>
+
+            </section>
+            
+            
+            
+            <section class="campoFormularioProdutos">
+                <article class="campoInputProdutos">
+                <label for="descricao">DESCRIÇÃO *</label>
+                    <textarea name="decricao" id="descricao" rows="12" cols="40"></textarea>
+                </article>
+                
+                
+            </section>
+            
+
+        </form>
+
+
+
+    </main>
+
+
+
+	<%- include('./partials/footer') %>
+    
+</body>
+</html>
