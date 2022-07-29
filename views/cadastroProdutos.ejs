@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../stylesheets/styleHomePage.css">
+    <link rel="stylesheet" href="../stylesheets/styleCadastro.css">
 	<link rel="stylesheet" href="../stylesheets/styleHeader.css">	
 	<link rel="stylesheet" href="../stylesheets/styleCadastroProdutos.css">	
 
@@ -21,7 +21,7 @@
         </section>
 
 
-        <form action="/admin/cadastro" method="post">
+        <form action="/admin/cadastro" method="post" enctype="multipart/form-data">
             <section class="campoFormularioProdutos">
                 <article class="campoInputProdutos">
                     <label for="nomeProduto">NOME DO PRODUTO *</label>
@@ -69,11 +69,52 @@
             
             <section class="campoFormularioProdutos">
                 <article class="campoInputProdutos">
-                <label for="descricao">DESCRIÇÃO *</label>
-                    <textarea name="decricao" id="descricao" rows="12" cols="40"></textarea>
+
+                    <label >TAMANHOS DISPONIVEIS *</label>
+                    <article class="inputCheckbox">
+
+                    
+                        
+                            <label for="tamanhoPP">PP</label>
+                            <input type="checkbox" name="tamanhoPP"   id="tamanhoPP">
+
+                            <label for="tamanhoP">P</label>
+                            <input type="checkbox" name="tamanhoP"   id="tamanhoP">
+
+                            <label for="tamanhoM">M</label>
+                            <input type="checkbox" name="tamanhoM"  id="tamanhoM">
+
+                            <label for="tamanhoG">G</label>
+                            <input type="checkbox" name="tamanhoG" id="tamanhoG">
+
+                            <label for="tamanhoGG">GG</label>
+                            <input type="checkbox" name="tamanhoGG"  id="tamanhoGG">
+                    </article>
+
+
+                    
+                    
+                </article>
+                <article class="imagemProduto">
+                    <label for="imagemProduto">IMAGEM DO PRODUTO *</label>
+                    <input type="file" name="imagemProduto" id="imagemProduto">
                 </article>
                 
                 
+            </section>
+
+            <section class="campoFormularioProdutos">
+
+                <article class="campoInputProdutos">
+                    <label for="descricao">DESCRIÇÃO DO PRODUTO *</label>
+                    <textarea name="decricao" id="descricao" rows="13" cols="55"></textarea>
+                </article>
+
+                <article id="button">
+                    <button id="buttonForm" type="submit">CADASTRAR PRODUTO</button>
+                </article>
+                
+
             </section>
             
 
