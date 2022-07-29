@@ -1,0 +1,32 @@
+[
+          {
+                    "nome": "Pedro",
+                    "last name": "bisteca",
+                    "email": "phmaravelli@gmail.com",
+                    "data-nascimento": "",
+                    "cpf": "",
+                    "telefone": "11965987634",
+                    "senha": "$2b$10$37SzpkUGRwDiKwjrStb1kegMgSjYkr/HZ.rvnsMyuNjKvdsdu69Yu",
+                    "senhac": ""
+          },
+          {
+                    "nome": "Pedro",
+                    "last name": "bisteca",
+                    "email": "phmaravelli123@gmail.com",
+                    "data-nascimento": "",
+                    "cpf": "",
+                    "telefone": "11965987634",
+                    "senha": "$2b$10$bMsJlM21SZUWayn3wissruiCZqE6XDDU7CWBGUz2xEsgXXlUClw.S",
+                    "confirmarsenha": ""
+          },
+          {
+                    "nome": "",
+                    "lastname": "",
+                    "email": "",
+                    "data-nascimento": "",
+                    "cpf": "",
+                    "telefone": "",
+                    "senha": "$2b$10$WLAi03u/9XHpht/zSuSH.Ov4CrMoQMNOTh/5hKTOUD2rV1y3DZXN6",
+                    "confirmarsenha": ""
+          }
+]

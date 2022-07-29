@@ -29,15 +29,15 @@
                 </h1>
             </div>
             <div class="dados-formulario">
-                <form action="" class="formulario-cadastro">
+                <form action="/cadastro" class="formulario-cadastro" method="post">
                     <div class="linha-formulario">
                         <div class="campo-formulario-cadastro" id="campo-esquerdo">
                             <label for="name">NOME:</label>
                             <input type="text" id="nome" name="nome">
                         </div>
                         <div class="campo-formulario-cadastro" id="campo-direito">
-                            <label for="last name">SOBRENOME:</label>
-                            <input type="text" id="last-name" name="last name">
+                            <label for="last-name">SOBRENOME:</label>
+                            <input type="text" id="last-name" name="lastname">
                         </div>
                     </div>    
                     <div class="linha-formulario">
@@ -53,7 +53,7 @@
                         </div>
                         <div class="campo-formulario-cadastro" id="campo-direito">
                             <label for="last name">SEXO:</label>
-                            <select name="last name" id="select-form">
+                            <select name="sexo" id="select-form">
                                 <option disabled selected></option>
                                 <option value="masculino">Masculino</option>
                                 <option value="feminino">Feminino</option>
@@ -80,7 +80,7 @@
                     <div class="linha-formulario">
                         <div class="campo-formulario-cadastro" id="campo-linhaunica-senha">
                             <label for="senha">CONFIRME SUA SENHA:</label>
-                            <input type="password" id="senha" name="senha">
+                            <input type="password" id="senha" name="confirmarsenha">
                         </div>  
                     </div>       
                     <div class="linha-formulario" id="texto-final-formulario">

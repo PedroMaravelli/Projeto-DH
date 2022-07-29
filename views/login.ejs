@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./stylesheets/styleLogin.css">
     <link rel="stylesheet" href="../stylesheets/styleCadastro.css">
 	<link rel="stylesheet" href="../stylesheets/styleHeader.css">
-    <title>Document</title>
+    <title>Login</title>
 </head>    
 <body>
 	<%- include('./partials/header') %>
@@ -20,7 +20,7 @@
                 </h1>
             </div>
             <div class="corpo-formulario">
-                <form action="" class="formulario-cadastro">
+                <form action="/cadastro/login" class="formulario-cadastro" method="post">
                     <div class="linha-formulario">
                         <div class="campo-formulario-cadastro" id="campo-linhaunica">
                             <label for="email">E-MAIL:</label>
