@@ -12,15 +12,25 @@ const controllersPagina = {
     home: (req,res) =>{
     res.render('homePage', {produtos: produtosMasculinos , produtosfem: produtosFemininos})
     },
+    produtos: (req,res) => {
+        res.render('produtos', {produtos: produtosMasculinos , produtosfem: produtosFemininos})
+    },
     cadastro: (req,res) => {
         res.render('cadastro')
     },
     cadastroProdutos: (req,res) =>{
         res.render('cadastroProdutos')
     },
+    cadastroProdutosPost: (req,res) =>{
+        const produtos = req.body
+        let erros = validationResult(req)
 
-
-
+        if(!erros.isEmpty()){
+            res.send('erro')
+        }else{
+            res.send('certo')
+        }
+    },
 
 
     cadastroPost: (req,res)=>{
@@ -29,7 +39,6 @@ const controllersPagina = {
         let erro = validationResult(req)
 
         if(!erro.isEmpty()){
-            console.log(erro.mapped())
             res.status(403).redirect('/cadastro')
         }else{
 
@@ -56,17 +65,14 @@ const controllersPagina = {
 
 
 
-
-
-    produtos: (req,res) => {
-        res.render('produtos', {produtos: produtosMasculinos , produtosfem: produtosFemininos})
-    },
     login: (req,res) => {
         res.render('login')
     },
     loginPost: (req,res)=>{
         const dataLogin = req.body
+
         let erro = validationResult(req)
+
         if(!erro.isEmpty()){
             console.log(erro.mapped())
             res.status(403).redirect('/cadastro')
@@ -87,7 +93,9 @@ const controllersPagina = {
             }
         }
         }
-    }
+}
+
+
 
 module.exports = controllersPagina
 
