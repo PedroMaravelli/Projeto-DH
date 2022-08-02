@@ -27,14 +27,9 @@ const controllersPagina = {
         const produtos = req.body
         let erros = validationResult(req)
 
-        if(!erros.isEmpty()){
-            res.status(403).redirect('/cadastro')
-        }else{
-
-            
-            produtosMasculinos.push(produtos.nomeProduto, produtos.precoProduto)
-            return res.render('produtos', {produtos: produtosMasculinos, produtosfem: produtosFemininos})
-        }
+            produtosMasculinos.push({nome:produtos.nome, valor:produtos.valor})
+            res.redirect('/produtos')
+        
     },
 
 

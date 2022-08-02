@@ -11,7 +11,7 @@ const validations = require('../midlawares/cadastroMiddlaware')
 const upload = multer({storage:multerDiskStorage})
 
 router.get('/cadastro', controllersPagina.cadastroProdutos)
-router.post('/cadastro',upload.single('imagemProduto'),validations, controllersPagina.cadastroProdutosPost)
+router.post('/cadastro',upload.single('imagemProduto'), controllersPagina.cadastroProdutosPost)
 
 
 module.exports = router
