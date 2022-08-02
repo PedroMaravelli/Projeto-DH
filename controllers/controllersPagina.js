@@ -5,7 +5,7 @@ let produtosFemininos = [{nome: 'Camiseta Feminina Branca', valor: 39.99 }, {nom
 const fs = require('fs')
 const usersJson = require('../users.json')
 const bcrypt = require('bcrypt')
-const {validationResult} = require('express-validator')
+
 
 const controllersPagina = {
 
@@ -22,19 +22,26 @@ const controllersPagina = {
         res.render('cadastroProdutos')
     },
     cadastroProdutosPost: (req,res) =>{
+        const {validationResult} = require('express-validator')
+
         const produtos = req.body
         let erros = validationResult(req)
 
         if(!erros.isEmpty()){
-            res.send('erro')
+            res.status(403).redirect('/cadastro')
         }else{
-            res.send('certo')
+
+            
+            produtosMasculinos.push(produtos.nomeProduto, produtos.precoProduto)
+            return res.render('produtos', {produtos: produtosMasculinos, produtosfem: produtosFemininos})
         }
     },
 
 
     cadastroPost: (req,res)=>{
         let dataUsers = req.body
+        const {validationResult} = require('express-validator')
+
 
         let erro = validationResult(req)
 

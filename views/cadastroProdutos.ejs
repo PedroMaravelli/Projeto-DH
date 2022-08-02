@@ -24,25 +24,25 @@
         <form action="/admin/cadastro" method="post" enctype="multipart/form-data">
             <section class="campoFormularioProdutos">
                 <article class="campoInputProdutos">
-                    <label for="nomeProduto">NOME DO PRODUTO *</label>
-                    <input type="text" name="nomeProduto" id="nomeProduto">
+                    <label for="nomeDoProduto">NOME DO PRODUTO *</label>
+                    <input type="text" name="nome" id="nomeDoProduto">
                 </article>
                 <article class='campoInputProdutos'>
-                    <label for="precoProduto">PREÇO DO PRODUTO *</label>
-                    <input type="number" name="precoProduto" id="precoProduto">
+                    <label for="preco">PREÇO DO PRODUTO *</label>
+                    <input type="number" name="valor" id="preco">
                 </article>
             </section>
 
             <section class="campoFormularioProdutos">
 
                 <article class="campoInputProdutos">
-                    <label for="idProduto">ID DO PRODUTO *</label>
-                    <input type="number" name="idProduto" id="idProduto">
+                    <label for="idDoProduto">ID DO PRODUTO *</label>
+                    <input type="number" name="idProduto" id="idDoProduto">
                 </article>
 
                 <article class="campoInputProdutos">
                     <label for="cor">COR DO PRODUTO *</label>
-                    <input type="text" name="cor" id="cor">
+                    <input type="text" name="corProduto" id="cor">
                 </article>  
 
             </section>
@@ -50,12 +50,12 @@
             <section class="campoFormularioProdutos">
                 <article class="campoInputProdutos">
                     <label for="estoque">QUANTIDADE EM ESTOQUE *</label>
-                    <input type="number" name="estoque" id="estoque">
+                    <input type="number" name="estoqueProduto" id="estoque">
                 </article>
 
                 <article class="campoInputProdutos">
-                    <label for="classificacao">CLASSIFICAÇÃO *</label>
-                    <select name="classificacao">
+                    <label >CLASSIFICAÇÃO *</label>
+                    <select name="classificacaoProduto">
                         <option value="selecione" selected disabled>Selecione</option>
                         <option value="masculino">Masculino</option>
                         <option value="feminino">Feminino</option>
@@ -96,8 +96,8 @@
                     
                 </article>
                 <article class="imagemProduto">
-                    <label for="imagemProduto">IMAGEM DO PRODUTO *</label>
-                    <input type="file" name="imagemProduto" id="imagemProduto">
+                    <label for="imagem">IMAGEM DO PRODUTO *</label>
+                    <input type="file" name="imagemProduto" id="imagem">
                 </article>
                 
                 
@@ -107,7 +107,7 @@
 
                 <article class="campoInputProdutos">
                     <label for="descricao">DESCRIÇÃO DO PRODUTO *</label>
-                    <textarea name="descricao" id="descricao" rows="13" cols="55"></textarea>
+                    <textarea name="descricao" id="descricaoProduto" rows="13" cols="55"></textarea>
                 </article>
 
                 <article id="button">
