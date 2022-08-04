@@ -6,7 +6,6 @@ const controllersCheckout = require('../controllers/controllersCheckout')
 const controllersCarrinho = require('../controllers/controllersCarrinho')
 
 router.get('/', controllersPagina.home)
-router.get('/cadastro', controllersPagina.cadastro)
 router.get('/produtos', controllersPagina.produtos)
 router.get('/carrinho', controllersCarrinho.carrinho)
 router.get('/checkout', controllersCheckout.checkout)
