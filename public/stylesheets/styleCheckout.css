@@ -80,58 +80,75 @@ main {
     font-family: 'Montserrat';
     width: 72%;
     height: 45px;
-    padding: 5px 10px;
     margin-bottom: 10px;
     border-radius: 12px;
   }
-  .Pedido{
-    font-family: 'Montserrat';
-    margin-top: 15px;
-    height: 600px;
-    padding: 20px;
-    border: 1px solid hsl(0, 0%, 85%);
-    align-content: center;
-    border-radius: 12px;
-  }
-  
-  table{
-    font-family: 'Montserrat';
-    border-radius: 12px;
+  .pedidoContainer {
+    border: 1px solid #6699ff;
+    border-radius: 10px;
+    font-family: 'Montserrat';   
     display: flex;
-    flex-direction: row;
-    align-items: auto;
-    justify-content: space-around;
-    
-  }
-  th{
-    font-family: 'Montserrat';
-    border-bottom: 1px solid #dadada;
-    padding: 10px;
-    
-  }
-  tr>td:nth-child(1){
+    justify-content: flex-end; 
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.produtoImg {
+    display: flex;
+    flex-wrap: wrap;
+}
+.produtoImg2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+th {
     text-align: left;
-    color: #000;
+    padding: 5px;
+    color: #fff;
+    background: #6699ff;
+    font-weight: normal;
+}
 
-  }
-  tr>td:nth-child(2){
-    font-family: 'Montserrat';
+td {
+    padding: 10px;
+}
+
+td input {
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+
+
+td img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.totalProdutos {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.totalProdutos table {
+    border-left: 1px solid #6699ff;
+    width: auto;
+    
+}
+
+td:last-child {
     text-align: right;
-    color: #000;
-  
-  }
-  td{
-    font-family: 'Montserrat';
-    border-bottom: 1px solid #dadada;
-    padding: 25px 25px 25px 0;
+}
 
-  }
-
-  .Pedido>div{
-    font-family: 'Montserrat';
-    padding: 5px 0; 
-    border-radius: 12px;
-  }
+th:last-child {
+    text-align: right;
+}
   
   button{
     font-family: 'Montserrat';

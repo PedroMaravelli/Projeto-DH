@@ -64,24 +64,57 @@
         <input type="tel" name="city"> 
       </label>
     </form>
-    <div class="Pedido">
-      <table class="boxPedido">
-        <tr>
-          <th colspan="2">Pedido</th>
-        </tr>
-        <tr>
-          <td>Camiseta Lisa Branca (M) - x1</td>
-          <td>R$49,99</td>
-        </tr>
-        <tr>
-          <td>Frete</td>
-          <td>R$0,00</td>
-        </tr>
-        <tr>
-          <td>TOTAL</td>
-          <td>R$49,99</td>
-        </tr>
-      </table><br>
+    <div class="pedidoContainer">
+      <table>
+          <tr>
+              <th>Produto</th>
+              <th>Quantidade</th>
+              <th>Preço</th>
+          </tr>
+          <tr>
+            <td>
+            <div class="produtoImg">
+              <img src="../images/camiseta-branca.webp">
+              <div>
+                <p>Camiseta Lisa Branca</p>
+                <small>Tamanho: M</small>
+              </div>
+            </div>
+          </td>
+              <td><input type="number" value="1"></td> 
+              <td>R$49,99</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="produtoImg2">
+                <img src="../images/camiseta-cinza.webp">
+                <div>
+                  <p>Camiseta Lisa Cinza</p>
+                  <small>Tamanho: M</small>
+                </div>
+              </div>
+            </td>
+            <td><input type="number" value="1"></td> 
+              <td>R$49,99</td>
+          </tr>
+      </table>
+      <div class="totalProdutos">
+        <table>
+          <tr>
+            <td>Subtotal</td>
+            <td>R$99,98</td>
+            </tr>
+            <tr>
+            <td>Frete</td>
+            <td>R$0,00</td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td>R$99,98</td>
+          </tr>
+        </table>
+      </div>
+    </div>
       <button type="button">Continuar para pagamento</button>
     </div>
    </div>
