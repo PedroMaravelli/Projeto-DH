@@ -34,7 +34,7 @@ form{
     margin-top: 10%;
     font-weight: 500;
     font-size: 18px;
-   
+
 }
 .campoFormularioProdutos{
     display: flex;
@@ -47,7 +47,7 @@ form{
     border-radius: 10px;
     height: 50px;
     width: 70%;
-    border: none;
+    
     
 }
 .campoFormularioProdutos .campoInputProdutos{
@@ -63,7 +63,7 @@ form{
     border-radius: 10px;
     height: 50px;
     width: 70%;
-    border: none;
+    border: 2px solid black;
 }
 
 .imagemProduto{
@@ -115,6 +115,7 @@ form #buttonForm:hover{
     align-items: center;
     justify-content: center;
 }
+
 
 
 
