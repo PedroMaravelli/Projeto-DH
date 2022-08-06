@@ -155,3 +155,10 @@ header nav div button{
     }
     
 }
+@media (max-width: 330px){
+    header nav div.menu-principal{
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+}
