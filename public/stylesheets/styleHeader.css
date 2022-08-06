@@ -54,6 +54,7 @@ header nav div.infos-right-menu-top{
 }
 header nav.menu-center{
     display: flex;
+    justify-content: center;
     align-items: center;
     width: 100%;
     max-width: 100%;
@@ -129,6 +130,28 @@ header nav div button{
     header nav div #img-header-logo{
         display: none;
 
+    }
+    header nav.menu-center{
+        justify-content: space-between;
+    }
+    
+}
+@media (max-width:600px) {
+    header nav div.campo-busca-menu{
+        display: none;
+    }
+    header nav div.menu-principal{
+        width: 100%;
+        margin-right: 15%;
+        margin-left: 15%;
+    }
+    header nav.menu-center{
+        height: 20vh;
+
+        
+    }
+    header nav div.infos-right-menu-top{
+        width: 100%;
     }
     
 }
