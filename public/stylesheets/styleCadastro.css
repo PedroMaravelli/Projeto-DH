@@ -164,6 +164,8 @@ body main .campo-formulario-cadastro#campo-linhaunica-senha button:hover{
 
 /* Seção Footer */
 body footer {
+    max-width: 100%;
+    width: 100%;
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 50px;
@@ -259,6 +261,7 @@ body footer article form.form-footer button:hover{
 
     body footer{
         width: 100%;
+        max-width: 100%;
         align-items: center;
         justify-content: center;
     }
