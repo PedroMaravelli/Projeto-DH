@@ -20,12 +20,21 @@ main{
     margin-bottom: 10%;
     align-items: center;
 }
+.campoDePerguntasFaq{
+    margin-top: 10%;
+}
 .textoPrincipalFaq h1{
     font-size: 2.9em;
 }
 .containerPaiFaq{
     display: flex;
     flex-direction: row;
+}
+.campoLadoEsquerdo{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+    margin-left: 5%;
 }
 .campoLadoDireito{
     display: flex;
@@ -46,12 +55,13 @@ main{
 @media (max-width: 500px) {
     .containerPaiFaq{
         flex-direction: column;
+        margin-top: 30%;
     }
     .campoLadoEsquerdo{
         margin-left: 5%;
     }
     
-}@media (max-width:420px){
+
     .textoPrincipalFaq h2{
         font-size: 1.3em;
         
@@ -59,4 +69,8 @@ main{
     .textoPrincipalFaq{
         text-align: center;
     }
+    .campoDePerguntasFaq{
+        margin-top: 10%;
+    }
+    
 }
