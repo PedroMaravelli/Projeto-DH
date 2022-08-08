@@ -12,6 +12,37 @@ const controllersPagina = {
     home: (req, res) => {
         res.render('homePage', { produtos: produtosMasculinos, produtosfem: produtosFemininos })
     },
+
+    produtos: (req,res) => {
+        res.render('produtos', {produtos: produtosMasculinos , produtosfem: produtosFemininos})
+    },
+    cadastro: (req,res) => {
+        res.render('cadastro')
+    },
+    cadastroProdutos: (req,res) =>{
+        res.render('cadastroProdutos')
+    },
+    cadastroProdutosPost: (req,res) =>{
+        const {validationResult} = require('express-validator')
+
+        const produtos = req.body
+        let erros = validationResult(req)
+
+            produtosMasculinos.push({nome:produtos.nome, valor:produtos.valor})
+            res.redirect('/produtos')
+        
+    },
+
+
+    cadastroPost: (req,res)=>{
+        let dataUsers = req.body
+        const {validationResult} = require('express-validator')
+
+
+        let erro = validationResult(req)
+
+        if(!erro.isEmpty()){
+
     cadastro: (req, res) => {
         res.render('cadastro')
     },
@@ -37,6 +68,18 @@ const controllersPagina = {
 
         }
     },
+
+
+
+
+
+
+
+    login: (req,res) => {
+        res.render('login')
+    },
+   
+
     produtos: (req, res) => {
         res.render('produtos', { produtos: produtosMasculinos, produtosfem: produtosFemininos })
     },

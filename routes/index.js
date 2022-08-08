@@ -12,6 +12,8 @@ router.get('/checkout', controllersCheckout.checkout)
 router.get('/login', controllersPagina.login)
 router.get('/perfil', controllersPagina.perfilUsuario)
 
+
+
 module.exports = router;
 
 

@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    margin: 10%;
+}
+
+.tituloCadastroDeProdutos{
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+    font-size: 36px;
+    border-bottom: 1px solid #bcbcbc;
+    height: 20vh;
+
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat';
+    width: 100%;
+    max-width: 100%;
+    margin-top: 10%;
+    font-weight: 500;
+    font-size: 18px;
+   
+}
+.campoFormularioProdutos{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    border: 1px solid white;
+}
+.campoFormularioProdutos .campoInputProdutos input{
+    border-radius: 10px;
+    height: 50px;
+    width: 70%;
+    border: none;
+    
+}
+.campoFormularioProdutos .campoInputProdutos{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.campoFormularioProdutos .campoInputProdutos select{
+    border-radius: 10px;
+    height: 50px;
+    width: 70%;
+    border: none;
+}
+
+.imagemProduto{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    
+}
+.imagemProduto input{
+    width: 50%;
+    margin-top: 10px;
+}
+
+form #buttonForm{
+    background: #6699FF;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    width: 50%;
+    color: white;
+    font-size: 18px;
+    
+}
+
+form #buttonForm:hover{
+    background: #2a71ff;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.inputCheckbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    width: 70%;
+    height: 20vh;
+
+}
+#button{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
