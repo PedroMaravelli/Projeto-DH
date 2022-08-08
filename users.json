@@ -20,13 +20,14 @@
                     "confirmarsenha": ""
           },
           {
-                    "nome": "",
-                    "lastname": "",
-                    "email": "",
-                    "data-nascimento": "",
-                    "cpf": "",
-                    "telefone": "",
-                    "senha": "$2b$10$WLAi03u/9XHpht/zSuSH.Ov4CrMoQMNOTh/5hKTOUD2rV1y3DZXN6",
-                    "confirmarsenha": ""
+                    "nome": "Pedro",
+                    "lastname": "Pinto",
+                    "email": "pedro.shiroma.pinto@gmail.com",
+                    "data-nascimento": "1990-08-06",
+                    "sexo": "masculino",
+                    "cpf": "35507394865",
+                    "telefone": "5515991019346",
+                    "senha": "$2b$10$gC7noC8DhBf5afaSw39i8e0FDjnv8IdicR.FWbdCF6R256fNfUQdq",
+                    "confirmarsenha": "123456"
           }
 ]

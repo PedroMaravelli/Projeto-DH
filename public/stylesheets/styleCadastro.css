@@ -142,7 +142,7 @@ body main .linha-formulario#texto-final-formulario{
     justify-content: flex-start;
 }
 body main .campo-formulario-cadastro#campo-linhaunica-senha button{
-    width: 399px;
+    width: 100%;
     background: #6699FF;
     height: 50px;
     border-radius: 10px;
@@ -152,7 +152,7 @@ body main .campo-formulario-cadastro#campo-linhaunica-senha button{
     margin-bottom: 150px;
 }
 body main .campo-formulario-cadastro#campo-linhaunica-senha button:hover{
-    width: 399px;
+    width: 100%;
     background: #2a71ff;
     height: 50px;
     border-radius: 10px;
@@ -161,7 +161,12 @@ body main .campo-formulario-cadastro#campo-linhaunica-senha button:hover{
     color: white;
     cursor: pointer;
 }
-
+input{
+    height: 50px;
+    background: #F3F1F1;
+    border-radius: 10px;
+    border: none;
+}
 /* Seção Footer */
 body footer {
     max-width: 100%;

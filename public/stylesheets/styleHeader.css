@@ -80,6 +80,9 @@ header nav div.menu-principal{
     margin-right: 5%;
     margin-left: 5%;
     width: 40%;
+
+    width: 20%;
+
     height: 100%;
 }
 header nav div p.itens-menu-principal{
@@ -91,6 +94,8 @@ header nav div.campo-busca-menu{
     display: flex;
     justify-content: flex-end;
     align-items: center;   
+    align-items: center;
+    width: 40%;    
     height: 100%;
     margin-right: 10%;
 }
