@@ -40,17 +40,7 @@ const controllersPagina = {
 
 
         let erro = validationResult(req)
-
         if(!erro.isEmpty()){
-
-    cadastro: (req, res) => {
-        res.render('cadastro')
-    },
-    cadastroPost: (req, res) => {
-        let dataUsers = req.body
-        let erro = validationResult(req)
-
-        if (!erro.isEmpty()) {
             console.log(erro.mapped())
             res.status(403).redirect('/cadastro')
         } else {
@@ -69,11 +59,9 @@ const controllersPagina = {
         }
     },
 
-
-
-
-
-
+    cadastro: (req, res) => {
+        res.render('cadastro')
+    },
 
     login: (req,res) => {
         res.render('login')
