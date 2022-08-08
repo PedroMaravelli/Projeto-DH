@@ -8,6 +8,6 @@ const controllersPagina = require('../controllers/controllersPagina')
 router.get('/', controllersPagina.cadastro)
 router.post('/',validations, controllersPagina.cadastroPost )
 router.get('/login', controllersPagina.login)
-router.post('/login',validations, controllersPagina.loginPost)
+router.post('/login',controllersPagina.loginPost)
 
 module.exports = router
