@@ -88,14 +88,11 @@ body main .linha-formulario{
     margin-bottom: 10px;
     justify-content: left;
 }
-
 .esqueceu-senha{
     display: flex;
     margin-bottom: 10px;
-    justify-content: left;
-    margin-left: 155px;
+    justify-content: center;
 }
-
 body main .formulario-cadastro label{
     font-family: 'Montserrat';
     font-weight: 500;
@@ -134,7 +131,6 @@ body main .campo-formulario-cadastro#campo-linhaunica-senha button{
     font-family: 'Montserrat';
     color: white;
     margin-bottom: 10px;
-    margin-left: 358px;
 }
 
 body main .campo-formulario-cadastro#campo-linhaunica-senha button:hover{
@@ -146,14 +142,12 @@ body main .campo-formulario-cadastro#campo-linhaunica-senha button:hover{
     font-family: 'Montserrat';
     color: white;
     cursor: pointer;
-    margin-left: 358px;
 }
 
 .nao-tem-conta{
     display: flex;
-    margin-bottom: 150px;
-    justify-content: right;
-    margin-right: 155px;
+    margin-bottom: 50px;
+    justify-content: center;
 }
 
 /* Seção Footer */
