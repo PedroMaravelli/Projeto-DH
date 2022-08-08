@@ -16,6 +16,9 @@ const controllersPagina = {
     produtos: (req,res) => {
         res.render('produtos', {produtos: produtosMasculinos , produtosfem: produtosFemininos})
     },
+    faq: (req, res)=>{
+        res.render('faq')
+    },
     cadastro: (req,res) => {
         res.render('cadastro')
     },
