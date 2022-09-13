@@ -99,9 +99,7 @@ const controllersPagina = {
         
         
     },
-    perfilUsuario: (req,res) => {
-        res.render('perfilUsuario', {usuario: req.session.usuario})
-    }
+    
 }
 
 module.exports = controllersPagina
