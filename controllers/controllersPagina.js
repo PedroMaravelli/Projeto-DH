@@ -6,6 +6,7 @@ const fs = require('fs')
 const usersJson = require('../users.json')
 const bcrypt = require('bcrypt')
 const { validationResult } = require('express-validator')
+const cookie = require('cookie-parser')
 
 const controllersPagina = {
 
@@ -56,6 +57,9 @@ const controllersPagina = {
                 if (err) throw err;
                 console.log("Done writing");
             });
+            
+            
+            
 
             res.redirect('/login')
 
@@ -89,6 +93,7 @@ const controllersPagina = {
             //compara a senha do formulario com a senha do json            
             let senhaValida = bcrypt.compareSync(dadosUsuario.senha, user.senha)
             if (senhaValida) {
+                res.cookie('nomeUsuario', dadosUsuario.email)
                 req.session.usuario = user
                 res.redirect('/perfil')
                 //login com sucesso                
