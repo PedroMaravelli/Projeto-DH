@@ -2,11 +2,11 @@ const fs = require('fs')
 const usersJson = require('../users.json')
 const bcrypt = require('bcrypt')
 const { validationResult } = require('express-validator')
-const {sequelize, Usuario} = require('../database/models')
+const { sequelize, Usuario } = require('../database/models')
 
-const controllersCadastroUsuario = {
+const controllersUsuario = {
     cadastroPost: async (req, res) => {
-        let { nome, sobrenome, email, data_nascimento, sexo, cpf, telefone, senha, confirma_senha, promocoes} = req.body
+        let { nome, sobrenome, email, data_nascimento, sexo, cpf, telefone, senha, confirma_senha, promocoes } = req.body
 
         const { validationResult } = require('express-validator')
         let erro = validationResult(req)
@@ -31,7 +31,7 @@ const controllersCadastroUsuario = {
                 telefone,
                 senha,
                 confirma_senha,
-                promocoes 
+                promocoes
             });
 
             usersJson.push(req.body)
@@ -39,11 +39,38 @@ const controllersCadastroUsuario = {
                 if (err) throw err;
                 console.log("Done writing");
             });
-           
-            res.redirect('/perfil')
+
+            res.redirect('/login')
 
         }
     },
+    loginPost: async (req, res) => {
+
+        const dadosUsuario = req.body
+
+        const user = await Usuario.findOne({
+            where: { email: dadosUsuario.email },
+        });
+
+        console.log(user)
+        //Busca o usuario por email
+        // const user = usersJson.find((u) => u.email == dadosUsuario.email)
+
+        //Valida se o usuario existe
+        if (user) {
+            //compara a senha do formulario com a senha do json            
+            let senhaValida = bcrypt.compareSync(dadosUsuario.senha, user.senha)
+            console.log(senhaValida)
+            if (senhaValida) {
+                req.session.usuario = user.dataValues
+                await res.redirect('/perfil')
+                return
+                //login com sucesso                
+            }
+        }
+        return res.send('Login ou senha errada')
+
+    }
 }
 
-module.exports = controllersCadastroUsuario
+module.exports = controllersUsuario

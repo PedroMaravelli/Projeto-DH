@@ -9,5 +9,16 @@
                     "telefone": "15991019346",
                     "senha": "123456",
                     "confirma_senha": "123456"
+          },
+          {
+                    "nome": "Pedro",
+                    "sobrenome": "Pinto",
+                    "email": "pedro@ohquemfala.com.br",
+                    "data_nascimento": "1990-08-06",
+                    "sexo": "masculino",
+                    "cpf": "35507394865",
+                    "telefone": "15991019346",
+                    "senha": "123456",
+                    "confirma_senha": "123456"
           }
 ]

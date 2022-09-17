@@ -50,29 +50,7 @@ const controllersPagina = {
     },
     login: (req, res) => {
         res.render('login')
-    },
-    loginPost: (req, res) => {
-        
-        const dadosUsuario = req.body
-        
-        //Busca o usuario por email
-        const user = usersJson.find((u) => u.email == dadosUsuario.email)
-        
-        //Valida se o usuario existe
-        if (user) {
-            //compara a senha do formulario com a senha do json            
-            let senhaValida = bcrypt.compareSync(dadosUsuario.senha, user.senha)
-            if (senhaValida) {
-                req.session.usuario = user
-                res.redirect('/perfil')
-                //login com sucesso                
-            }
-        }
-        return res.send('Login ou senha errada')              
-        
-        
-        
-    },
+    },       
     perfilUsuario: (req,res) => {
         res.render('perfilUsuario', {usuario: req.session.usuario})
     }
