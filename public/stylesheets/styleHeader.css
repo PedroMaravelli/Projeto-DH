@@ -80,8 +80,8 @@ header nav div.menu-principal{
     margin-right: 5%;
     margin-left: 5%;
     width: 40%;
-
-    width: 20%;
+    
+    
 
     height: 100%;
 }
@@ -120,7 +120,7 @@ header nav div button{
 }
 
 
-@media (max-width:820px) {
+@media (max-width:860px) {
     
     header nav div.infos-left-menu-top{
         display: none;
@@ -131,6 +131,7 @@ header nav div button{
     }
     header nav div p.itens-menu-principal{
         font-size: 1em;
+        padding: 20px;
     }
     header nav div #img-header-logo{
         display: none;
