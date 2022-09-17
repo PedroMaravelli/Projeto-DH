@@ -18,7 +18,7 @@ main{
     justify-content: center;
     align-items: center;
     font-family: 'Montserrat';
-    font-size: 36px;
+    font-size: 20px;
     border-bottom: 1px solid #bcbcbc;
     height: 20vh;
 
@@ -63,7 +63,8 @@ form{
     border-radius: 10px;
     height: 50px;
     width: 70%;
-    border: 2px solid black;
+    border: none;
+    background-color: #f3f1f1;
 }
 
 .imagemProduto{
