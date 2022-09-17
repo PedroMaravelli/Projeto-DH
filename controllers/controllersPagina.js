@@ -34,33 +34,7 @@ const controllersPagina = {
             produtosMasculinos.push({nome:produtos.nome, valor:produtos.valor})
             res.redirect('/produtos')
         
-    },
-
-
-    cadastroPost: (req,res)=>{
-        let dataUsers = req.body
-        const {validationResult} = require('express-validator')
-
-
-        let erro = validationResult(req)
-        if(!erro.isEmpty()){
-            console.log(erro.mapped())
-            res.status(403).redirect('/cadastro')
-        } else {
-
-            const passwordC = bcrypt.hashSync(dataUsers.senha, 10)
-            dataUsers.senha = passwordC
-            usersJson.push(dataUsers)
-            fs.writeFile('users.Json', JSON.stringify(usersJson, null, 10), err => {
-
-                if (err) throw err;
-                console.log("Done writing");
-            });
-
-            res.redirect('/login')
-
-        }
-    },
+    },   
 
     cadastro: (req, res) => {
         res.render('cadastro')

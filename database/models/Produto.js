@@ -17,11 +17,15 @@ module.exports = (sequelize, DataType) => {
         tableName: 'produtos'
     })
 
+    produto.associate = (models)=>{
+        produto.belongsToMany(models.Carrinho,{
+            as:'carrinho_produto',
+            through:'carrinhos_has_produtos',
+            foreignKey:'carrinhos_id',
+            otherKey:'produtos_id',
+            timestamps: false
+        })   
+    }
+
     return produto
-
-
-
-
-
-
 }

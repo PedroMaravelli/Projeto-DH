@@ -1,33 +1,13 @@
 [
           {
-                    "nome": "Pedro",
-                    "last name": "bisteca",
-                    "email": "phmaravelli@gmail.com",
-                    "data-nascimento": "",
-                    "cpf": "",
-                    "telefone": "11965987634",
-                    "senha": "$2b$10$37SzpkUGRwDiKwjrStb1kegMgSjYkr/HZ.rvnsMyuNjKvdsdu69Yu",
-                    "senhac": ""
-          },
-          {
-                    "nome": "Pedro",
-                    "last name": "bisteca",
-                    "email": "phmaravelli123@gmail.com",
-                    "data-nascimento": "",
-                    "cpf": "",
-                    "telefone": "11965987634",
-                    "senha": "$2b$10$bMsJlM21SZUWayn3wissruiCZqE6XDDU7CWBGUz2xEsgXXlUClw.S",
-                    "confirmarsenha": ""
-          },
-          {
-                    "nome": "Pedro",
-                    "lastname": "Pinto",
-                    "email": "pedro.shiroma.pinto@gmail.com",
-                    "data-nascimento": "1990-08-06",
+                    "nome": "Final",
+                    "sobrenome": "final",
+                    "email": "final@final.com.br",
+                    "data_nascimento": "1990-08-06",
                     "sexo": "masculino",
                     "cpf": "35507394865",
-                    "telefone": "5515991019346",
-                    "senha": "$2b$10$gC7noC8DhBf5afaSw39i8e0FDjnv8IdicR.FWbdCF6R256fNfUQdq",
-                    "confirmarsenha": "123456"
+                    "telefone": "15991019346",
+                    "senha": "123456",
+                    "confirma_senha": "123456"
           }
 ]
