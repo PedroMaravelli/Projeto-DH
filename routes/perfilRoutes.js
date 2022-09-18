@@ -5,6 +5,7 @@ const auth = require('../midlawares/authMiddlaware')
 
 
 router.get('/', auth, controllersPerfilUsuario.perfilUsuario)
+router.post('/', controllersPerfilUsuario.updateSenha)
 
 
 module.exports = router

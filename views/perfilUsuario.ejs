@@ -1,47 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../stylesheets/styleCadastro.css">    
+    <link rel="stylesheet" href="../stylesheets/styleCadastro.css">
     <link rel="stylesheet" href="../stylesheets/styleHeader.css">
 
     <title>Cadastro</title>
-</head>    
+</head>
+
 <body>
     <%- include('./partials/header') %>
-    <main>
-        <section class="area-cadastro">
-            <div class="titulo-cadastro">
-                <h1>
-                    Olá <%= usuario.nome %>, confira os seus dados:
-                </h1>
-
+        <main>
+            <section class="area-cadastro">
+                <div class="titulo-cadastro">
+                    <h1>
+                        Olá <%= usuario.nome %>, confira os seus dados:
+                    </h1>
+                </div>
+                <div class="linha-formulario">
+                    <div class="campo-formulario-cadastro" id="campo-esquerdo">
+                        <h2>NOME:</h2>
+                        <p>
+                            <%= usuario.nome %>
+                        </p>
+                    </div>
+                    <div class="campo-formulario-cadastro" id="campo-direito">
+                        <h2>SOBRENOME:</h2>
+                        <p>
+                            <%= usuario.sobrenome %>
+                        </p>
+                    </div>
+                </div>
+                <div class="linha-formulario">
+                    <div class="campo-formulario-cadastro" id="campo-linhaunica">
+                        <h2>E-MAIL:</h2>
+                        <p>
+                            <%= usuario.email %>
+                        </p>
+                    </div>
+                </div>
+                <div class="linha-formulario">
+                    <div class="campo-formulario-cadastro" id="campo-esquerdo">
+                        <h2>CPF:</h2>
+                        <p>
+                            <%= usuario.cpf %>
+                        </p>
+                    </div>
+                    <div class="campo-formulario-cadastro" id="campo-direito">
+                        <h2>TELEFONE:</h2>
+                        <p>
+                            <%= usuario.telefone %>
+                        </p>
+                    </div>
+                </div>
+                <form action="/perfil" method="post">
                     <div class="linha-formulario">
                         <div class="campo-formulario-cadastro" id="campo-linhaunica-senha">
                             <p>ALTERAR SENHA:</p>
                             <input type="password" id="senha" name="senha">
-                        </div>  
-                    </div>  
+                        </div>
+                    </div>
                     <div class="linha-formulario">
                         <div class="campo-formulario-cadastro" id="campo-linhaunica-senha">
+                            
                             <p>CONFIRME SUA SENHA:</p>
-                            <input type="password" id="senha" name="senha">
-                        </div>  
-                    </div>       
+                            <input type="password" id="senha" name="confirmeSenha">
+                        </div>
+                    </div>
 
                     <div class="linha-formulario">
                         <div class="campo-formulario-cadastro" id="campo-linhaunica-senha">
                             <button type="submit" class="botao-cadastro-formulario">ALTERAR </button>
-                        </div>  
+                        </div>
                     </div>
                 </form>
-            </div>            
-        </section>
-    </main>
-    
+                
+            </section>
+        </main>
 
-    <%- include('./partials/footer') %>
+
+        <%- include('./partials/footer') %>
 </body>
+
 </html>
