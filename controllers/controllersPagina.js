@@ -6,6 +6,7 @@ const fs = require('fs')
 const usersJson = require('../users.json')
 const bcrypt = require('bcrypt')
 const { validationResult } = require('express-validator')
+const cookie = require('cookie-parser')
 
 const controllersPagina = {
 
@@ -34,7 +35,7 @@ const controllersPagina = {
             produtosMasculinos.push({nome:produtos.nome, valor:produtos.valor})
             res.redirect('/produtos')
         
-    },   
+
 
     cadastro: (req, res) => {
         res.render('cadastro')
@@ -50,10 +51,7 @@ const controllersPagina = {
     },
     login: (req, res) => {
         res.render('login')
-    },       
-    perfilUsuario: (req,res) => {
-        res.render('perfilUsuario', {usuario: req.session.usuario})
-    }
+
 }
 
 module.exports = controllersPagina

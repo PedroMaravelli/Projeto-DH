@@ -10,10 +10,13 @@ module.exports = (sequelize, DataType) => {
         senha: DataType.STRING,
         confirma_senha: DataType.STRING,
         promocoes: DataType.INTEGER
+
     },{
         timestamps: false,
         tableName: 'usuarios'
     })
+ 
+
 
     usuario.associate = (models)=>{
         usuario.hasMany(models.Endereco,{
@@ -30,4 +33,5 @@ module.exports = (sequelize, DataType) => {
     }
 
     return usuario
+
 }

@@ -9,6 +9,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var cadastroRouter = require('./routes/cadastroRoutes')
 var cadastroProdutosRouter = require('./routes/adminCadastroProdutos')
+var perfilRouter = require('./routes/perfilRoutes')
+
 
 
 var app = express();
@@ -32,6 +34,8 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/cadastro', cadastroRouter);
 app.use('/admin', cadastroProdutosRouter);
+app.use('/perfil', perfilRouter);
+
 
 
 

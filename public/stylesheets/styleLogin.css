@@ -143,6 +143,29 @@ body main .campo-formulario-cadastro#campo-linhaunica-senha button:hover{
     color: white;
     cursor: pointer;
 }
+body main .campo-formulario-cadastro#campo-linhaunica-senha #senha-form{
+    border: none;
+}
+body main .campo-formulario-cadastro#campo-linhaunica-senha .errosForm {
+    display: none;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    
+    color: red;
+    margin-top: 5px;
+    margin-bottom: 15%;
+    padding-right: 5px;
+    font-family: 'Montserrat';
+
+    
+}
+body main .campo-formulario-cadastro#campo-linhaunica-senha .errosForm img{
+    width: 20px;
+    height: 20px;
+
+
+}
 
 .nao-tem-conta{
     display: flex;

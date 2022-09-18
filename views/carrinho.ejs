@@ -23,8 +23,29 @@
                 </div>
                 <div class="descricaoProduto">
                     <strong>Camiseta Branca</strong>
-                    <p>Tamanho: M</p>
-                    <p>Qtd: 1<p>
+                    <select name="quantidadeProduto" class="selectsCarrinho">
+                        <option disabled selected>Quantidade</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <select name="tamanhoProduto" class="selectsCarrinho" >
+                        <option disabled selected>Selecione o Tamanho</option>
+                        <option value="pp">PP</option>
+                        <option value="p">P</option>
+                        <option value="m">M</option>
+                        <option value="g">G</option>
+                        <option value="gg">GG</option>
+
+                    </select>
+                    
                 </div>
                 <div class="precoProdutoCarrinho">
                     <p>R$ 59,99</p>
@@ -34,7 +55,7 @@
         <section class="frete">
             <article class="freteValorDoPedido">
                 <div class="freteCarrinho">
-                    <form action="" method="post">
+                    <form action="/carrinho" method="get">
                         <label for="frete">FRETE</label>
                         <input type="text" name="frete" id="frete" placeholder="00000-000">
                         <button id="buttonCarrinho" type="submit">CONFIRMAR CEP</button>
