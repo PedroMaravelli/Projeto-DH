@@ -14,5 +14,11 @@ module.exports = (sequelize, DataType) => {
         tableName: 'enderecos'
     })
 
+    endereco.associate = (models)=>{
+        endereco.belongsTo(models.Usuario,{
+            as:'usuario_endereco',            
+            foreignKey:'usuarios_id'
+        })   
+    }
     return endereco
 }
