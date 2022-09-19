@@ -1,4 +1,6 @@
 const {sequelize, Usuario} = require('../database/models')
+const bcrypt = require('bcrypt')
+
 
 const controllersPerfilUsuario = {
     perfilUsuario: (req,res) => {
@@ -7,7 +9,13 @@ const controllersPerfilUsuario = {
         res.render('perfilUsuario',{usuario:req.session.usuario})
     },
     updateSenha: async (req, res) =>{
-        const {senha, confirmeSenha} = req.body
+        let {senha, confirmeSenha} = req.body
+
+        const senhaCriptografada = bcrypt.hashSync(senha, 10)
+        senha = senhaCriptografada
+        const confirmeSenhaCriptografada = bcrypt.hashSync(confirmeSenha,10)
+        confirmeSenha = confirmeSenhaCriptografada
+
         const updateSenha = await Usuario.update({
             senha: senha,
             confirma_senha: confirmeSenha
@@ -15,6 +23,8 @@ const controllersPerfilUsuario = {
         },{
             where:{id: req.session.idUser}
         })
+
+        return res.redirect('/')
 
 
     }

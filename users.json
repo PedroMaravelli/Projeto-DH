@@ -31,5 +31,16 @@
                     "telefone": "11965987634",
                     "senha": "123456",
                     "confirma_senha": "123456"
+          },
+          {
+                    "nome": "Carlos",
+                    "sobrenome": "Maravelli",
+                    "email": "phmaravelli123@gmail.com",
+                    "data_nascimento": "2006-04-04",
+                    "sexo": "masculino",
+                    "cpf": "54739275809",
+                    "telefone": "11965987634",
+                    "senha": "040406",
+                    "confirma_senha": "040406"
           }
 ]
