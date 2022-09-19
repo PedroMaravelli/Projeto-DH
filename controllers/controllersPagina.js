@@ -35,8 +35,8 @@ const controllersPagina = {
             produtosMasculinos.push({nome:produtos.nome, valor:produtos.valor})
             res.redirect('/produtos')
         
-
-
+    },
+    
     cadastro: (req, res) => {
         res.render('cadastro')
     },
@@ -48,9 +48,7 @@ const controllersPagina = {
 
     produtos: (req, res) => {
         res.render('produtos', { produtos: produtosMasculinos, produtosfem: produtosFemininos })
-    },
-    login: (req, res) => {
-        res.render('login')
+    }
 
 }
 
