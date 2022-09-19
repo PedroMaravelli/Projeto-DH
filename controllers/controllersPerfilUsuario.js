@@ -16,15 +16,22 @@ const controllersPerfilUsuario = {
         const confirmeSenhaCriptografada = bcrypt.hashSync(confirmeSenha,10)
         confirmeSenha = confirmeSenhaCriptografada
 
-        const updateSenha = await Usuario.update({
-            senha: senha,
-            confirma_senha: confirmeSenha
+        if(req.session.idUser != undefined){
+            const updateSenha = await Usuario.update({
+                senha: senha,
+                confirma_senha: confirmeSenha
+    
+            },{
+                where:{id: req.session.idUser}
+            })
+    
+            return res.redirect('/')
 
-        },{
-            where:{id: req.session.idUser}
-        })
+        }else{
+            return res.redirect('/login')
+        }
 
-        return res.redirect('/')
+
 
 
     }

@@ -56,18 +56,19 @@
                         </p>
                     </div>
                 </div>
-                <form action="/perfil" method="post">
+                <form action="/perfil" method="post" id="formUpdateSenha" >
                     <div class="linha-formulario">
                         <div class="campo-formulario-cadastro" id="campo-linhaunica-senha">
                             <p>ALTERAR SENHA:</p>
                             <input type="password" id="senha" name="senha">
+                            <div id="error"></div>
                         </div>
                     </div>
                     <div class="linha-formulario">
                         <div class="campo-formulario-cadastro" id="campo-linhaunica-senha">
                             
                             <p>CONFIRME SUA SENHA:</p>
-                            <input type="password" id="senha" name="confirmeSenha">
+                            <input type="password" id="confirmeSenha" name="confirmeSenha">
                         </div>
                     </div>
 
@@ -83,6 +84,7 @@
 
 
         <%- include('./partials/footer') %>
+        <script src="/javascripts/perfilForms.js"></script>
 </body>
 
 </html>
