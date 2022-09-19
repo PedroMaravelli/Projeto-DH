@@ -3,6 +3,7 @@ const usersJson = require('../users.json')
 const bcrypt = require('bcrypt')
 const { validationResult } = require('express-validator')
 const { sequelize, Usuario } = require('../database/models')
+const cookie = require('cookie-parser')
 
 const controllersUsuario = {
     cadastroPost: async (req, res) => {
@@ -33,6 +34,7 @@ const controllersUsuario = {
                 confirma_senha,
                 promocoes
             });
+           
 
             usersJson.push(req.body)
             fs.writeFile('users.Json', JSON.stringify(usersJson, null, 10), err => {
@@ -40,7 +42,7 @@ const controllersUsuario = {
                 console.log("Done writing");
             });
 
-            res.redirect('/login')
+            res.render('login', {resultado})
 
         }
     },
@@ -62,8 +64,10 @@ const controllersUsuario = {
             let senhaValida = bcrypt.compareSync(dadosUsuario.senha, user.senha)
             console.log(senhaValida)
             if (senhaValida) {
+                res.cookie('nomeUsuario',user.email)
+                req.session.idUser = user.id
                 req.session.usuario = user.dataValues
-                await res.redirect('/perfil')
+                await res.render('perfilUsuario', {usuario:req.session.usuario})
                 return
                 //login com sucesso                
             }

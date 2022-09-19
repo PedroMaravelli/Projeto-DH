@@ -131,6 +131,28 @@ body main .campo-formulario-cadastro#campo-linhaunica-senha{
     padding-left: 30%;
     padding-right: 30%;
 }
+
+body main #error , #errorConfirmarSenha{
+    display: none;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    color: red;
+    margin-top: 5px;
+    margin-bottom: 15%;
+    padding-right: 5px;
+    font-family: 'Montserrat';
+}
+body main #errorConfirmarSenha img{
+    width: 20px;
+    height: 20px;
+}
+body main #error img{
+    width: 20px;
+    height: 20px;
+}
+
+
 #checkbox{
     margin: 5px;
 }
