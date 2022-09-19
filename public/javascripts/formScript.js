@@ -27,6 +27,7 @@ form.addEventListener('submit', (event) =>{
 
         inputSenha.style.border = '1px solid red'
         labelSenha.style.color = 'red'
+        labelSenha.style.color = 'red'
         event.preventDefault()
     }
 
