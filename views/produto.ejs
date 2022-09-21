@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/stylesCarrinho.css">
+    <link rel="stylesheet" href="../stylesheets/styleCadastro.css">
+    <link rel="stylesheet" href="../stylesheets/styleHeader.css">
+    <title>Carrinho</title>
+</head>
+<body>
+    <%- include('./partials/header') %>
+    <main>
+        <section class="titulo-botao">
+                <h1><%=produto.nome%></h1>                
+        </section>
+        <section class="produtosCarrinho">            
+                <div class="imagemProduto">
+                    <img id="imagemProduto" src=.<%=produto.imagem%>>
+                </div>
+                <div class="descricaoProduto">                    
+                    <strong><%=produto.descricao%></strong>
+                    <p>Preço: R$ <%=produto.preco%>,00</p><br>                    
+                    <form action="/adiciona-produto/<%produto.id%>" method="POST" class="formulario-cadastro" id="form-produto">                        
+                        <label for="quantidade">Quantidade:</label>
+                        <select name="quantidade" id="quantidade-produto">                            
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select> 
+                        <label for="tamanho">Tamanho:</label>
+                        <select name="tamanho" id="quantidade-produto">
+                            <option disabled selected></option>
+                            <option value="PP">PP</option>
+                            <option value="P">P</option>
+                            <option value="M">M</option>
+                            <option value="G">G</option>
+                            <option value="GG">GG</option>
+                        </select> 
+                        <button type="submit" id="buttonCarrinho">Adicionar ao Carrinho</button>    
+                    </form>
+                </div>                             
+        </section>        
+    </main>
+    <%- include('./partials/footer') %>  
+</body>
+</html>
