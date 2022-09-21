@@ -36,7 +36,7 @@ const controllersPagina = {
             res.redirect('/produtos')
         
     },
-    
+
     cadastro: (req, res) => {
         res.render('cadastro')
     },

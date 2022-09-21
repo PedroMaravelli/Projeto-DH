@@ -90,7 +90,7 @@ body main section.area-produtos-principal{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 80%;
+    width: 100%;
     margin-bottom: 50px;
 }
 body main section div.produtos-cards{
@@ -123,8 +123,19 @@ body main section div.produtos-cards{
     height: 40px;
     margin-top: 5%;
 }
+.elementosCards a:hover{
+    cursor:pointer;
+}
 .elementosCards button:hover{
     color: #D9D9D9;
+    cursor:pointer;
+}
+.elementosCards button#produto-indisponivel{
+    background-color: rgb(175, 175, 175);
+}
+.elementosCards button#produto-indisponivel:hover{
+    color: white;
+    cursor: default;
 }
 .produtosCard{
     display: flex;

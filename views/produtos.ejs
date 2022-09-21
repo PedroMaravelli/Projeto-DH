@@ -18,7 +18,7 @@
 			</h1>
 		</section>
 		<section class="area-produtos">			
-			<section class="menu-lateral-produtos">
+			<!-- <section class="menu-lateral-produtos">
 				<h3>FILTRAR POR:</h3>
 				<div class="caixa-filtro-lateral">
 					<div class="box-titulo">
@@ -66,7 +66,7 @@
 					<button type="submit">Filtrar</button>
 					</form>				
 				</div>
-			</section>  
+			</section>   -->
 			<section class="area-produtos-principal">
 				<div class="produtos-cards">
 					<article class="produtosCard">
@@ -75,40 +75,27 @@
 
 						<article class="elementosCards">
 							<div class="imagemProdutosCard">
-								<img src="/images/camiseta-branca.webp">
+								<img src=<%=produto.imagem%>>
 							</div>
 							<div class="elementosCards">
 								<p><%=produto.nome%></p>
-								<p>R$<%=produto.valor%></p>
+								<p>R$ <%=produto.preco%>,00</p>
 							</div>
-							<button type="submit">Comprar</button>
+							<% if(produto.quantidade == 0) {%>
+								<button id="produto-indisponivel">Indisponível</button>
+							<%} else{%>	
+								<a href="/produto/<%=produto.id%>"><button type="submit">Comprar</button></a>
+							<% } %>
 						</article>
 					<% } %>
 
 
-				</div>	
-				<div class="produtos-cards">
-					<article class="produtosCard">
-
-					<% for(let produto of produtosfem) { %>
-						<article class="elementosCards">
-							<div class="imagemProdutosCard">
-								<img src="/images/camiseta-fem-azul.jpg">
-							</div>
-							<div class="elementosCards">
-								<p><%=produto.nome%></p>
-								<p>R$<%=produto.valor%></p>
-							</div>
-							<button type="submit">Comprar</button>
-						</article>		
-					<% } %>
-						
-					</article>
 				</div>								
 			</section>			
 		</section>
     </main>
-	<%- include('./partials/footer') %>    
+	<%- include('./partials/footer') %>  
+	<script src="../public/javascripts/exibeBotao.js"></script>  
 </body>
 </html>
 

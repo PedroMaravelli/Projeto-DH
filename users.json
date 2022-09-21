@@ -20,5 +20,71 @@
                     "telefone": "15991019346",
                     "senha": "123456",
                     "confirma_senha": "123456"
+          },
+          {
+                    "nome": "Pedro Henrique",
+                    "sobrenome": "Maravelli",
+                    "email": "phmaravelli@gmail.com",
+                    "data_nascimento": "2006-04-04",
+                    "sexo": "masculino",
+                    "cpf": "54739275809",
+                    "telefone": "11965987634",
+                    "senha": "123456",
+                    "confirma_senha": "123456"
+          },
+          {
+                    "nome": "Carlos",
+                    "sobrenome": "Maravelli",
+                    "email": "phmaravelli123@gmail.com",
+                    "data_nascimento": "2006-04-04",
+                    "sexo": "masculino",
+                    "cpf": "54739275809",
+                    "telefone": "11965987634",
+                    "senha": "040406",
+                    "confirma_senha": "040406"
+          },
+          {
+                    "nome": "Diana",
+                    "sobrenome": "Nunes",
+                    "email": "diana@gmail.com",
+                    "data_nascimento": "1978-06-05",
+                    "sexo": "feminino",
+                    "cpf": "12345678999",
+                    "telefone": "11965987634",
+                    "senha": "589218",
+                    "confirma_senha": "589218"
+          },
+          {
+                    "nome": "Angélica",
+                    "sobrenome": "Maravelli",
+                    "email": "phmaravelli@gmail.com",
+                    "data_nascimento": "1985-02-10",
+                    "sexo": "feminino",
+                    "cpf": "54739275877",
+                    "telefone": "11965987634",
+                    "senha": "12345",
+                    "confirma_senha": "12345"
+          },
+          {
+                    "nome": "Angélica",
+                    "sobrenome": "Maravelli",
+                    "email": "phmaravelli@gmail.com",
+                    "data_nascimento": "1985-02-10",
+                    "sexo": "feminino",
+                    "cpf": "54739275877",
+                    "telefone": "11965987634",
+                    "senha": "12345",
+                    "confirma_senha": "12345"
+          },
+          {
+                    "nome": "Pedro",
+                    "sobrenome": "barchello",
+                    "email": "phmaravelli@dh.com",
+                    "data_nascimento": "2005-04-04",
+                    "sexo": "masculino",
+                    "cpf": "54789325608",
+                    "telefone": "11965987634",
+                    "senha": "12345",
+                    "confirma_senha": "12345"
           }
 ]

@@ -6,9 +6,6 @@ const labelSenha = document.getElementById('labelSenha')
 const erroEmail = document.getElementById('erroEmail')
 const erroSenha = document.getElementById('erroSenha')
 
-
-
-
 form.addEventListener('submit', (event) =>{
 
     if(inputEmail.value == ''){
@@ -27,13 +24,12 @@ form.addEventListener('submit', (event) =>{
 
         inputSenha.style.border = '1px solid red'
         labelSenha.style.color = 'red'
+        labelSenha.style.color = 'red'
         event.preventDefault()
-    }
-
-
-    
+    }    
 
 })
+
 
 
 
