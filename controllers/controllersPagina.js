@@ -44,7 +44,7 @@ const controllersPagina = {
     login: (req,res) => {
         res.render('login')
     },
-   
+
 
     produtos: (req, res) => {
         res.render('produtos', { produtos: produtosMasculinos, produtosfem: produtosFemininos })
