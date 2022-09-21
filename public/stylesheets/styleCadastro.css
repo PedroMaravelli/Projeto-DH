@@ -163,6 +163,10 @@ body main .linha-formulario#texto-final-formulario{
     padding-right: 30%;
     justify-content: flex-start;
 }
+body main .campo-formulario-cadastro .erros{
+    margin-bottom: 20px;
+    
+}
 body main .campo-formulario-cadastro#campo-linhaunica-senha button{
     width: 100%;
     background: #6699FF;
