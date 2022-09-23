@@ -1,10 +1,20 @@
 const {sequelize, Produto} = require('../database/models')
+const cookie = require('cookie-parser')
 
 const controllerProduto = {
     produto: async (req,res) => {
-        const {id} = req.params
+        const {sku} = req.params
+        let exibeProdutos = []
+        let produto = await Produto.findAll({
+            where:{SKU: sku},raw: true
+        })
+        res.cookie('produtoVisualizado', produto[0], {maxAge: 500000})
 
-        const produto = await Produto.findByPk(id)
+        
+        
+
+        
+        
         res.render('produto', { produto })
     }
 

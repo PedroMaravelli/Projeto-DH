@@ -8,7 +8,9 @@ const controllersProdutos = require ('../controllers/controllersProdutos')
 
 router.get('/', controllersPagina.home)
 router.get('/produtos', controllersProdutos.renderizaProdutos)
+
 router.get('/carrinho', controllersCarrinho.carrinho)
+router.post('/carrinho/:id', controllersCarrinho.carrinhoPedido)
 router.get('/checkout', controllersCheckout.checkout)
 router.get('/login', controllersPagina.login)
 router.get('/faq', controllersPagina.faq)
