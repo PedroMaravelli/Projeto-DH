@@ -1,34 +1,39 @@
-const {sequelize, Carrinho} = require('../database/models')
-const {CarrinhoProduto} = require('../database/models')
+const { sequelize, Carrinho } = require('../database/models')
+const { CarrinhoProduto } = require('../database/models')
 const cookie = require('cookie-parser')
-let carrinhoCookie = []
+const { raw } = require('express')
+
 
 const controllersCarrinho = {
-    carrinho: (req,res) => {
-
-
-
-
-
-    res.render('carrinho',{carrinho: req.cookies.carrinho})
-    },
-     carrinhoPedido: (req,res)=>{
-        const {id} = req.params
-        const {quantidade, tamanho} = req.body
+    carrinhoPedido: (req, res) => {
+        const { nome, imagem, preco, quantidade, tamanho} = req.body
         
-       
-        carrinhoCookie.push({quantidades:quantidade,tamanhos:tamanho, id})
-        console.log(carrinhoCookie);
-        res.cookie('carrinho', carrinhoCookie,{maxAge: 100000})
+        let carrinhoCookie = req.cookies.carrinho
+        carrinhoCookie.push({ nome: nome, imagem: imagem, preco:preco, quantidade: quantidade, tamanho: tamanho })      
+                
+        res.cookie('carrinho', carrinhoCookie)
         res.redirect('/carrinho')
     },
-    adicionaCarrinho: async (req,res) => {
-
-        const {quantidade, tamanho} = req.body
-
+    carrinho: (req, res) => {
         
-        
+        let carrinho = req.cookies.carrinho
+        console.log(carrinho)
+        let totalProdutos = 0
+        for (let produto of carrinho){            
+            totalProdutos += produto.quantidade*produto.preco
+        }
+        res.render('carrinho', { carrinho: carrinho, totalProdutos:totalProdutos })
+    },
+    adicionaCarrinho: async (req, res) => {
+
+        const { quantidade, tamanho } = req.body
+
+    },
+    esvaziaCarrinho: (req,res) => {
+        let esvaziaCarrinho = []
+        res.cookie('carrinho', esvaziaCarrinho)
+        res.redirect('/carrinho')
     }
-    
+
 }
 module.exports = controllersCarrinho

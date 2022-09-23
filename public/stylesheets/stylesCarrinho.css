@@ -45,8 +45,10 @@ main{
     flex-direction: row;
     width: 100%;
     height: auto;
-    align-items: center;
+    align-items: center;    
     margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: solid 1px grey;
 }
 .produtosCarrinho .selectsCarrinho{
     margin-top: 10%;
@@ -57,7 +59,7 @@ main{
 }
 
 #imagemProduto{
-    width: 260px;
+    width: 100px;
     height: auto;
 }
 .descricaoProduto{
@@ -115,7 +117,6 @@ main{
     border: none;
     font-weight: bold;
     cursor: pointer;
-
 }
 .naoSeiMeuCep {
     display: flex;

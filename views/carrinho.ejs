@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,79 +10,63 @@
     <link rel="stylesheet" href="../stylesheets/styleHeader.css">
     <title>Carrinho</title>
 </head>
+
 <body>
     <%- include('./partials/header') %>
-    <main>
-        <section class="titulo-botao">
+        <main>
+            <section class="titulo-botao">
                 <h1>MEU CARRINHO</h1>
-                <button type="submit">CONTINUAR COMPRANDO</button>
-        </section>
-        <section class="produtosCarrinho">
-            
-                <div class="imagemProduto">
-                    <img id="imagemProduto" src="images/camiseta-branca.webp" alt="cmiseta branca">
-                </div>
-                <div class="descricaoProduto">
-                    <strong>Camiseta Branca</strong>
-                    <select name="quantidadeProduto" class="selectsCarrinho">
-                        <option disabled selected>Quantidade</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
-                    <select name="tamanhoProduto" class="selectsCarrinho" >
-                        <option disabled selected>Selecione o Tamanho</option>
-                        <option value="pp">PP</option>
-                        <option value="p">P</option>
-                        <option value="m">M</option>
-                        <option value="g">G</option>
-                        <option value="gg">GG</option>
-
-                    </select>
-                    
-                </div>
-                <div class="precoProdutoCarrinho">
-                    <p>R$ 59,99</p>
-                </div>
-                
-        </section>
-        <section class="frete">
-            <article class="freteValorDoPedido">
-                <div class="freteCarrinho">
-                    <form action="/carrinho" method="get">
-                        <label for="frete">FRETE</label>
-                        <input type="text" name="frete" id="frete" placeholder="00000-000">
-                        <button id="buttonCarrinho" type="submit">CONFIRMAR CEP</button>
+                <a href="/produtos"><button type="button" id="buttonCarrinho">Continuar Comprando</button></a>            </section>
+            <% for(let produto of carrinho) { %>
+                <section class="produtosCarrinho">
+                    <div class="imagemProduto">
+                        <img id="imagemProduto" src='<%= produto.imagem %>' alt="camiseta branca">
+                    </div>
+                    <div class="descricaoProduto">
+                        <strong>
+                            <%= produto.nome %>
+                        </strong>
+                            <h3>Quantidade</h3>
+                            <p><%= produto.quantidade %></p>                            
+                        </select><br>
+                        <h3>Tamanho</h3>
+                        <p>
+                            <%= produto.tamanho%>
+                        </p>
+                    </div>
+                    <div class="precoProdutoCarrinho">
+                        <p>R$ <%= produto.preco*produto.quantidade%>,00</p>
+                    </div>
+                </section>
+                <% } %>
+                    <form action="/esvazia-carrinho" method="POST">
+                        <button type="submit">Esvaziar carrinho</button>
                     </form>
-                    <div class="naoSeiMeuCep">
-                        <a href="https://buscacepinter.correios.com.br/app/localidade_logradouro/index.php">NÃO SEI MEU CEP</a>
-                        
-                </div>
-            </article>   
-            
-            <article class="valorDoPedido">
-                <div class="resumoDoPedido">
-                    <p>RESUMO DO PEDIDO</p>
-                </div>
-                <div class="subtotalCarrinho">
-                    <p class="1">SUBTOTAL</p>
-                    <p class="2">R$ 59,99</p>
-                </div>
-                <div class="totalDoPedido">
-                    <p>TOTAL</p>
-                    <p>R$ 59,99</p>
-                </div>
-                <a href="/checkout"><button type="button" id="buttonCarrinho">FINALIZAR PEDIDO</button></a>
-            </article>
-        
-    </main>
-    <%- include('./partials/footer') %>  
+                    <section class="frete">
+                        <article class="freteValorDoPedido">
+                            <div class="freteCarrinho">
+                                <form action="/carrinho" method="get">
+                                    <label for="frete">FRETE</label>
+                                    <input type="text" name="frete" id="frete" placeholder="00000-000">
+                                    <button id="buttonCarrinho" type="submit">CONFIRMAR CEP</button>
+                                </form>
+                                <div class="naoSeiMeuCep">
+                                    <a href="https://buscacepinter.correios.com.br/app/localidade_logradouro/index.php">NÃO
+                                        SEI
+                                        MEU CEP</a>
+                                </div>
+                        </article>
+
+                        <article class="valorDoPedido">                            
+                            <div class="totalDoPedido">
+                                <h2>TOTAL</h2>                                
+                                <h2>R$ <%= totalProdutos %>,00</h2>
+                            </div>
+                            <a href="/checkout"><button type="button" id="buttonCarrinho">FINALIZAR PEDIDO</button></a>
+                        </article>
+
+        </main>
+        <%- include('./partials/footer') %>
 </body>
+
 </html>
