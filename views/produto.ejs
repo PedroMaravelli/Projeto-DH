@@ -17,12 +17,12 @@
         </section>
         <section class="produtosCarrinho">            
                 <div class="imagemProduto">
-                    <img id="imagemProduto" src=.<%=produto.imagem%>>
+                    <img id="imagemProduto" src=.<%=produto[0].imagem%>>
                 </div>
                 <div class="descricaoProduto">                    
-                    <strong><%=produto.descricao%></strong>
-                    <p>Preço: R$ <%=produto.preco%>,00</p><br>                    
-                    <form action="/adiciona-produto/<%produto.id%>" method="POST" class="formulario-cadastro" id="form-produto">                        
+                    <strong><%=produto[0].descricao%></strong>
+                    <p>Preço: R$ <%=produto[0].preco%>,00</p><br>                    
+                    <form action="/carrinho/<%=produto[0].id%>" method="POST" class="formulario-cadastro" id="form-produto">                        
                         <label for="quantidade">Quantidade:</label>
                         <select name="quantidade" id="quantidade-produto">                            
                             <option value="1">1</option>
@@ -32,13 +32,13 @@
                             <option value="5">5</option>
                         </select> 
                         <label for="tamanho">Tamanho:</label>
-                        <select name="tamanho" id="quantidade-produto">
+                        <select name="tamanho" id="tamanho">
                             <option disabled selected></option>
-                            <option value="PP">PP</option>
-                            <option value="P">P</option>
-                            <option value="M">M</option>
-                            <option value="G">G</option>
-                            <option value="GG">GG</option>
+
+
+                            <% for(let i =0; i < produto.length; i++){%>
+                            <option value='<%=produto[i].tamanho%>'><%=produto[i].tamanho%></option>
+                            <%}%>
                         </select> 
                         <button type="submit" id="buttonCarrinho">Adicionar ao Carrinho</button>    
                     </form>
@@ -46,5 +46,6 @@
         </section>        
     </main>
     <%- include('./partials/footer') %>  
+    <script src="/javascripts/scriptProduto.js"></script>
 </body>
 </html>

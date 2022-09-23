@@ -11,12 +11,13 @@ const controllersProdutos = {
 
         for (let i = 0; i < produtos.length; i++){
             if(exibeProdutos.includes(produtos[i].nome) == false){
-                console.log(produtos[i].nome)
+                
                 exibeProdutos.push(produtos[i].nome)
                 novosProdutos.push(produtos[i])
             }
         }
         produtos = novosProdutos
+        
         res.render('produtos', { produtos })
     }
 }
