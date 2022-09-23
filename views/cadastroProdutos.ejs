@@ -1,132 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../stylesheets/styleCadastro.css">
-	<link rel="stylesheet" href="../stylesheets/styleHeader.css">	
-	<link rel="stylesheet" href="../stylesheets/styleCadastroProdutos.css">	
+    <link rel="stylesheet" href="../stylesheets/styleHeader.css">
+    <link rel="stylesheet" href="../stylesheets/styleCadastroProdutos.css">
 
 
 
     <title>Cadastro de Produtos</title>
 </head>
+
 <body>
-	<%- include('./partials/header') %>
+    <%- include('./partials/header') %>
 
-    <main>
-        <section class="tituloCadastroDeProdutos">
-            <h1>CADASTRO DE PRODUTOS</h1>
-        </section>
-
-
-        <form action="/admin/cadastro" method="post" enctype="multipart/form-data">
-            <section class="campoFormularioProdutos">
-                <article class="campoInputProdutos">
-                    <label for="nomeDoProduto">NOME DO PRODUTO *</label>
-                    <input type="text" name="nome" id="nomeDoProduto">
-                </article>
-                <article class='campoInputProdutos'>
-                    <label for="preco">PREÇO DO PRODUTO *</label>
-                    <input type="number" name="valor" id="preco">
-                </article>
+        <main>
+            <section class="tituloCadastroDeProdutos">
+                <h1>CADASTRO DE PRODUTOS</h1>
             </section>
 
-            <section class="campoFormularioProdutos">
-
-                <article class="campoInputProdutos">
-                    <label for="idDoProduto">ID DO PRODUTO *</label>
-                    <input type="number" name="idProduto" id="idDoProduto">
-                </article>
-
-                <article class="campoInputProdutos">
-                    <label for="cor">COR DO PRODUTO *</label>
-                    <input type="text" name="corProduto" id="cor">
-                </article>  
-
-            </section>
-
-            <section class="campoFormularioProdutos">
-                <article class="campoInputProdutos">
-                    <label for="estoque">QUANTIDADE EM ESTOQUE *</label>
-                    <input type="number" name="estoqueProduto" id="estoque">
-                </article>
-
-                <article class="campoInputProdutos">
-                    <label >CLASSIFICAÇÃO *</label>
-                    <select name="classificacaoProduto">
-                        <option value="selecione" selected disabled>Selecione</option>
-                        <option value="masculino">Masculino</option>
-                        <option value="feminino">Feminino</option>
-
-                    </select>
-                </article>
-
-            </section>
-            
-            
-            
-            <section class="campoFormularioProdutos">
-                <article class="campoInputProdutos">
-
-                    <label >TAMANHOS DISPONIVEIS *</label>
-                    <article class="inputCheckbox">
-
-                    
+            <form action="/admin/cadastro" method="post" enctype="multipart/form-data">
+                <section class="campoFormularioProdutos">
+                    <article class="campoInputProdutos">
+                        <label for="SKU">SKU *</label>
+                        <input type="text" name="SKU" id="nomeDoProduto">
+                    </article>
+                    <article class="campoInputProdutos">
+                        <label for="nome">NOME DO PRODUTO *</label>
+                        <input type="text" name="nome" id="nomeDoProduto">
+                    </article>                
+                    <article class="campoInputProdutos">
+                        <label for="descricao">Descrição do produto *</label>
+                        <input type="text" name="descricao" id="nomeDoProduto">
+                    </article>
+                    <article class='campoInputProdutos'>
+                        <label for="valor">PREÇO DO PRODUTO *</label>
+                        <input type="number" name="valor" id="preco">
+                    </article>
+                </section>
+                <section class="campoFormularioProdutos">
+                    <article class="campoInputProdutos">
+                        <label for="cor">COR DO PRODUTO *</label>
+                        <input type="text" name="cor" id="cor">
+                    </article>                
+                    <article class="campoInputProdutos">
+                        <label>TAMANHO *</label>
+                        <article class="inputCheckbox">
+                            <select name="classificacaoProduto">
+                                <option value="selecione" selected disabled>Selecione</option>
+                                <option value="PP">PP</option>
+                                <option value="P">P</option>
+                                <option value="M">M</option>
+                                <option value="G">G</option>
+                                <option value="GG">GG</option>
+                            </select>
+                        </article>
+                        <article class="campoInputProdutos">
+                            <label>CLASSIFICAÇÃO *</label>
+                            <select name="classificacaoProduto">
+                                <option value="selecione" selected disabled>Selecione</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
+                            </select>
+                        </article>
+                        <article class="campoInputProdutos">
+                            <label for="quantidade">QUANTIDADE EM ESTOQUE *</label>
+                            <input type="number" name="quantidade" id="estoque">
+                        </article>
                         
-                            <label for="tamanhoPP">PP</label>
-                            <input type="checkbox" name="tamanhoPP"   id="tamanhoPP">
+                </section>
+                <section class="campoFormularioProdutos">
+                    </article>
+                    <article class="imagemProduto">
+                        <label for="imagem">IMAGEM DO PRODUTO *</label>
+                        <input type="file" name="imagemProduto" id="imagem">
+                    </article>
+                </section>
+                <section class="campoFormularioProdutos">      
 
-                            <label for="tamanhoP">P</label>
-                            <input type="checkbox" name="tamanhoP"   id="tamanhoP">
-
-                            <label for="tamanhoM">M</label>
-                            <input type="checkbox" name="tamanhoM"  id="tamanhoM">
-
-                            <label for="tamanhoG">G</label>
-                            <input type="checkbox" name="tamanhoG" id="tamanhoG">
-
-                            <label for="tamanhoGG">GG</label>
-                            <input type="checkbox" name="tamanhoGG"  id="tamanhoGG">
+                    <article id="button">
+                        <button id="buttonForm" type="submit">CADASTRAR PRODUTO</button>
                     </article>
 
 
-                    
-                    
-                </article>
-                <article class="imagemProduto">
-                    <label for="imagem">IMAGEM DO PRODUTO *</label>
-                    <input type="file" name="imagemProduto" id="imagem">
-                </article>
-                
-                
-            </section>
+                </section>
 
-            <section class="campoFormularioProdutos">
 
-                <article class="campoInputProdutos">
-                    <label for="descricao">DESCRIÇÃO DO PRODUTO *</label>
-                    <textarea name="descricao" id="descricaoProduto" rows="13" cols="55"></textarea>
-                </article>
-
-                <article id="button">
-                    <button id="buttonForm" type="submit">CADASTRAR PRODUTO</button>
-                </article>
-                
-
-            </section>
-            
-
-        </form>
+            </form>
 
 
 
-    </main>
+        </main>
 
 
 
-	<%- include('./partials/footer') %>
-    
+        <%- include('./partials/footer') %>
+
 </body>
+
 </html>

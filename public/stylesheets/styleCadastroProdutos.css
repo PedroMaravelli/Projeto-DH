@@ -38,7 +38,7 @@ form{
 }
 .campoFormularioProdutos{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     justify-content: center;
     border: 1px solid white;
@@ -100,13 +100,13 @@ form #buttonForm:hover{
 }
 .inputCheckbox{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-self: center;
     align-items: center;
     justify-content: space-between;
-
     box-sizing: border-box;
-    width: 70%;
-    height: 20vh;
+    width: 100%;
+    margin-bottom: 20px;
 
 }
 #button{
