@@ -62,13 +62,13 @@
 				<% for(let produto of produtos) { %>
 					<article class="elementosCards">
 							<div class="imagemProdutosCard">
-									<img src="./images/camiseta-branca.webp">
+									<img src="<%=produto.imagem%>">
 							</div>
 							<div class="elementosCards">
 								<p><%= produto.nome %></p>
-								<p>R$<%= produto.valor %></p>
+								<p>R$<%= produto.preco %>.00</p>
 							</div>
-							<a href="/carrinho"><button type="submit">COMPRAR</button></a>
+							<a href="/produto/<%= produto.SKU%>"><button type="submit">COMPRAR</button></a>
 							
 					</article>
 						
@@ -88,16 +88,16 @@
         <section class="cardsHome">
             <article class="produtosCard">
 
-                <% for(let produto of produtosfem) { %>
+                <% for(let produto of produtosFem) { %>
 					<article class="elementosCards">
 							<div class="imagemProdutosCard">
-									<img src="./images/camiseta-fem-azul.jpg">
+									<img src="<%=produto.imagem%>">
 							</div>
 							<div class="elementosCards">
 								<p><%= produto.nome %></p>
-								<p>R$<%= produto.valor %></p>
+								<p>R$<%= produto.preco %>.00</p>
 							</div>
-							<a href="/carrinho"><button type="submit">COMPRAR</button></a>
+							<a href="/produto/<%= produto.SKU%>"><button type="submit">COMPRAR</button></a>
 							
 					</article>
 						

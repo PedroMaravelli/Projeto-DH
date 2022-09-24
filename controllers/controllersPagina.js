@@ -7,11 +7,18 @@ const usersJson = require('../users.json')
 const bcrypt = require('bcrypt')
 const { validationResult } = require('express-validator')
 const cookie = require('cookie-parser')
+const {sequelize, Produto} = require('../database/models')
+const {Op} = require('sequelize')
 
 const controllersPagina = {
 
-    home: (req, res) => {
-        res.render('homePage', { produtos: produtosMasculinos, produtosfem: produtosFemininos })
+    home: async  (req, res) => {
+        const produtos = await Produto.findAll({limit:4})
+        const produtosFem = await Produto.findAll({
+            where:{genero: 'Feminino'},
+            limit: 4
+        })
+        res.render('homePage', { produtos, produtosFem })
     },
 
     produtos: (req,res) => {
@@ -46,9 +53,7 @@ const controllersPagina = {
     },
 
 
-    produtos: (req, res) => {
-        res.render('produtos', { produtos: produtosMasculinos, produtosfem: produtosFemininos })
-    }
+
 
 }
 
