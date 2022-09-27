@@ -9,5 +9,6 @@ router.get('/', controllersPagina.cadastro)
 router.post('/',validations, controllersUsuario.cadastroPost)
 router.get('/login', controllersPagina.login)
 router.post('/login',controllersUsuario.loginPost)
+router.post('perfil', controllersUsuario.perfil)
 
 module.exports = router

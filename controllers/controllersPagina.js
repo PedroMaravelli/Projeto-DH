@@ -11,7 +11,8 @@ const cookie = require('cookie-parser')
 const controllersPagina = {
 
     home: (req, res) => {
-        res.render('homePage', { produtos: produtosMasculinos, produtosfem: produtosFemininos })
+        // let logado =  req.session.usuario ? true:false
+        res.render('homePage', { produtos: produtosMasculinos, produtosfem: produtosFemininos})
     },
 
     produtos: (req,res) => {

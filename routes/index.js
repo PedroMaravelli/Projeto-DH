@@ -13,6 +13,7 @@ router.get('/carrinho', controllersCarrinho.carrinho)
 router.post('/carrinho/:id', controllersCarrinho.carrinhoPedido)
 router.post('/esvazia-carrinho', controllersCarrinho.esvaziaCarrinho)
 router.get('/checkout', controllersCheckout.checkout)
+router.post('/pagamento', controllersCheckout.finalizaCarrinho)
 router.get('/login', controllersPagina.login)
 router.get('/faq', controllersPagina.faq)
 

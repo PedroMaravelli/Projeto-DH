@@ -7,17 +7,19 @@ const { raw } = require('express')
 const controllersCarrinho = {
     carrinhoPedido: (req, res) => {
         const { nome, imagem, preco, quantidade, tamanho} = req.body
-        
+
+        res.cookie('carrinho', [])
+                
         let carrinhoCookie = req.cookies.carrinho
         carrinhoCookie.push({ nome: nome, imagem: imagem, preco:preco, quantidade: quantidade, tamanho: tamanho })      
-                
+
         res.cookie('carrinho', carrinhoCookie)
         res.redirect('/carrinho')
     },
     carrinho: (req, res) => {
         
         let carrinho = req.cookies.carrinho
-        console.log(carrinho)
+        // console.log(carrinho)
         let totalProdutos = 0
         for (let produto of carrinho){            
             totalProdutos += produto.quantidade*produto.preco
