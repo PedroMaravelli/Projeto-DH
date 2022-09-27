@@ -1,93 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../stylesheets/styleCheckout.css">
-    <link rel="stylesheet" href="../stylesheets/styleHeader.css">	
-    <title>Checkout</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../stylesheets/styleCheckout.css">
+  <link rel="stylesheet" href="../stylesheets/styleHeader.css">
+  <title>Checkout</title>
 </head>
+
 <body>
   <%- include('./partials/header')%>
-<main>
+    <main>
 
-<div class="container"> 
-    <div class="title">
-        <h2>Dados de Contato/Entrega</h2>
-    </div>
-  </div>
+      <div class="container">
+        <div class="title">
+          <h2>Dados de Contato/Entrega</h2>
+        </div>
+      </div>
 
-  <div class="d-flex">
-    <form action="" method="">
-      <label>
-        <span class="email">E-mail<span class="required">*</span></span>
-        <input type="text" name="email">
-      </label>
-      <label>
-        <span class="nome">Nome do Destinatário<span class="required">*</span></span>
-        <input type="text" name="nome">
-      </label>
-      <label>
-        <span>País<span class="required">*</span></span>
-        <select name="selection">
-          <option value="select">Selecione o País</option>
-          <option value="AFG">Argentina</option>
-          <option value="BRA">Brasil</option>
-          <option value="CAN">Canada</option>
-        </select>
-      </label>
-      <label>
-        <span>Endereço<span class="required">*</span></span>
-        <input type="text" name="houseadd" placeholder="Rua, Avenida, Número, etc." required>
-      </label>
-      <label>
-        <span>&nbsp;</span>
-        <input type="text" name="Complemento" placeholder="Apartamento, suite, etc. (opcional)">
-      </label>
-      <label>
-        <span>Cidade<span class="required">*</span></span>
-        <input type="text" name="city"> 
-      </label>
-      <label>
-        <span>Estado <span class="required">*</span></span>
-        <input type="text" name="city"> 
-      </label>
-      <label>
-        <span>CEP <span class="required">*</span></span>
-        <input type="text" name="city"> 
-      </label>
-      <label>
-        <span>Telefone <span class="required">*</span></span>
-        <input type="tel" name="city"> 
-      </label>
-    </form>
-    <div class="Pedido">
-      <table class="boxPedido">
-        <tr>
-          <th colspan="2">Pedido</th>
-        </tr>
-        <tr>
-          <td>Camiseta Lisa Branca (M) - x1</td>
-          <td>R$49,99</td>
-        </tr>
-        <tr>
-          <td>Frete</td>
-          <td>R$0,00</td>
-        </tr>
-        <tr>
-          <td>TOTAL</td>
-          <td>R$49,99</td>
-        </tr>
-      </table><br>
-      <button type="button">Continuar para pagamento</button>
-    </div>
-   </div>
-  </div>
+      <div class="d-flex">
+        <form action="/pagamento" method="POST">
+          <label>
+            <span class="pais">País<span class="required">*</span></span>
+            <input type="text" name="pais">
+          </label>
+          </label>
+          <label>
+            <span>Estado <span class="required">*</span></span>
+            <input type="text" name="estado">
+          </label>
+          <label>
+            <span>Cidade<span class="required">*</span></span>
+            <input type="text" name="cidade">
+          </label>
+          <label>
+            <span>CEP<span class="required">*</span></span>
+            <input type="text" name="cep">
+          </label>
+          <label>
+            <span>Endereço<span class="required">*</span></span>
+            <input type="text" name="rua" placeholder="Rua, Avenida, Número, etc." required>
+          </label>
+          <label>
+            <span>Complemento</span>
+            <input type="text" name="complemento" placeholder="Apartamento, suite, etc. (opcional)">
+          </label>
+          <label>
+            <span>Número<span class="required">*</span></span>
+            <input type="number" name="numero">
+          </label>
+          <div class="Pedido">
+            <table class="boxPedido">
+              <tr>
+                <th colspan="2">Resumo do Pedido</th>
+              </tr>
+              <% for(let produto of produtos) {%>
+                <tr>
+                  <td>
+                    <%=produto.nome%>
+                  </td>
+                  <td>R$ <%=produto.preco%>,00</td>
+                </tr>
+                <%}%>
+                  <tr>
+                    <td>Frete</td>
+                    <td>R$0,00</td>
+                  </tr>
+                  <tr>
+                    <td id="total-pedido">TOTAL</td>
+                    <td id="total-pedido">R$ <%= totalProdutos %>,00</td>
+                  </tr>
+            </table><br>
+            <button type="submit">Continuar para pagamento</button>
+        </form>
+      </div>
+      </div>
+      </div>
 
-</main>
+    </main>
 
-<%- include('./partials/footer')%>   
+    <%- include('./partials/footer')%>
 
 </body>
+
 </html>

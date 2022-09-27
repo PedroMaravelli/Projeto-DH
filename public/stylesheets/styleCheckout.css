@@ -96,6 +96,10 @@ main {
     border-bottom: 1px solid #dadada;
     padding: 25px 25px 25px 0;
   }
+  td#total-pedido{
+    font-weight: 800;
+  }
+
 
   .Pedido>div{
     padding: 5px 0; 

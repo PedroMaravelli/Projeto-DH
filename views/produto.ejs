@@ -13,7 +13,7 @@
     <%- include('./partials/header') %>
     <main>
         <section class="titulo-botao">
-                <h1><%=produto.nome%></h1>                
+                <h1><%=produto[0].nome%></h1>                
         </section>
         <section class="produtosCarrinho">            
                 <div class="imagemProduto">
@@ -22,7 +22,10 @@
                 <div class="descricaoProduto">                    
                     <strong><%=produto[0].descricao%></strong>
                     <p>Preço: R$ <%=produto[0].preco%>,00</p><br>                    
-                    <form action="/carrinho/<%=produto[0].id%>" method="POST" class="formulario-cadastro" id="form-produto">                        
+                    <form action="/carrinho/<%=produto[0].id%>" method="POST" class="formulario-cadastro" id="form-produto">  
+                        <input type="hidden" name="nome" value="<%=produto[0].nome%>">
+                        <input type="hidden" name="imagem" value="<%=produto[0].imagem%>"> 
+                        <input type="hidden" name="preco" value="<%=produto[0].preco%>">                     
                         <label for="quantidade">Quantidade:</label>
                         <select name="quantidade" id="quantidade-produto">                            
                             <option value="1">1</option>
@@ -39,7 +42,7 @@
                             <% for(let i =0; i < produto.length; i++){%>
                             <option value='<%=produto[i].tamanho%>'><%=produto[i].tamanho%></option>
                             <%}%>
-                        </select> 
+                        </select>                         
                         <button type="submit" id="buttonCarrinho">Adicionar ao Carrinho</button>    
                     </form>
                 </div>                             

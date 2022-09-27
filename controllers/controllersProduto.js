@@ -11,10 +11,6 @@ const controllerProduto = {
         res.cookie('produtoVisualizado', produto[0], {maxAge: 500000})
 
         
-        
-
-        
-        
         res.render('produto', { produto })
     }
 

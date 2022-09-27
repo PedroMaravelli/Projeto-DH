@@ -51,10 +51,10 @@ const controllersUsuario = {
         const dadosUsuario = req.body
 
         const user = await Usuario.findOne({
-            where: { email: dadosUsuario.email },
+            where: { email: dadosUsuario.email },raw:true
         });
 
-        console.log(user)
+        // console.log(user)
         //Busca o usuario por email
         // const user = usersJson.find((u) => u.email == dadosUsuario.email)
 
@@ -62,18 +62,22 @@ const controllersUsuario = {
         if (user) {
             //compara a senha do formulario com a senha do json            
             let senhaValida = bcrypt.compareSync(dadosUsuario.senha, user.senha)
-            console.log(senhaValida)
+            // console.log(senhaValida)
             if (senhaValida) {
                 res.cookie('nomeUsuario',user.email)
                 req.session.idUser = user.id
-                req.session.usuario = user.dataValues
-                await res.render('perfilUsuario', {usuario:req.session.usuario})
+                req.session.usuario = user
+                console.log(user)
+                res.redirect('/')
                 return
                 //login com sucesso                
             }
         }
         return res.send('Login ou senha errada')
 
+    },
+    perfil: (req, res) => {
+        res.render('perfilUsuario', {usuario:req.session.usuario})
     }
 }
 
