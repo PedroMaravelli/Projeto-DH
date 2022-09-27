@@ -54,7 +54,7 @@ finalizaCarrinho: async (req,res) => {
 
         produtosAtualiza.push(produtoEscolhido)            
     }            
-    
+        
     //Finaliza pedido na tabela Carrinho
     const carrinho = await Carrinho.create({
         status: "Aberto",
@@ -65,18 +65,26 @@ finalizaCarrinho: async (req,res) => {
     let carrinhoId = await Carrinho.findOne({
         where: {usuarios_id: user.id, status: "Aberto"},raw:true
     })
-
+    console.log(carrinhoId)
+    
+    let criaCarrinhoQuantidade = req.cookies.carrinho
+    
     //Cria pedido na tabela CarrinhoProduto
     for(let i = 0; i < produtosAtualiza.length; i++){
-        for(let j = 1; j <= quantidade; j++){
             let carrinhoProduto = await CarrinhoProduto.create({
                 carrinhos_id: carrinhoId.id,
-                produtos_id: produtosAtualiza[i].id
-            });
-            console.log(carrinhoProduto)
+                produtos_id: produtosAtualiza[i].id,
+                quantidade: criaCarrinhoQuantidade[i].quantidade
+            });            
         }        
-    }
     
+    //Fecha carrinho
+    let carrinhoIdFechado = await Carrinho.update(
+        {status:'Fechado'}, {where: {usuarios_id: user.id, status: "Aberto"}})
+
+    //Esvazia carrinho
+    let esvaziaCarrinho = []
+    res.cookie('carrinho', esvaziaCarrinho)
 
     res.redirect('/')
 }

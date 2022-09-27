@@ -8,17 +8,24 @@ const controllersCarrinho = {
     carrinhoPedido: (req, res) => {
         const { nome, imagem, preco, quantidade, tamanho} = req.body
 
-        res.cookie('carrinho', [])
-                
-        let carrinhoCookie = req.cookies.carrinho
-        carrinhoCookie.push({ nome: nome, imagem: imagem, preco:preco, quantidade: quantidade, tamanho: tamanho })      
+        let carrinhoCookie = req.cookies.carrinho 
 
+        if (carrinhoCookie == undefined){
+            carrinhoCookie = []
+        }
+
+        carrinhoCookie.push({ nome: nome, imagem: imagem, preco:preco, quantidade: quantidade, tamanho: tamanho })      
+        
         res.cookie('carrinho', carrinhoCookie)
         res.redirect('/carrinho')
     },
     carrinho: (req, res) => {
-        
         let carrinho = req.cookies.carrinho
+
+        if (carrinho == undefined){
+            carrinho = []
+        }        
+        
         // console.log(carrinho)
         let totalProdutos = 0
         for (let produto of carrinho){            
