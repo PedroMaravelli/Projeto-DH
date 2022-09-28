@@ -11,23 +11,45 @@ const cookie = require('cookie-parser')
 const controllersPagina = {
 
     home: (req, res) => {
-        // let logado =  req.session.usuario ? true:false
-        res.render('homePage', { produtos: produtosMasculinos, produtosfem: produtosFemininos})
-    },
+        //Lógica usuário logado
+        let logado = req.cookies.perfilUsuario
+        if(logado == undefined){
+            logado = false            
+        } 
 
-    produtos: (req,res) => {
-        res.render('produtos', {produtos: produtosMasculinos , produtosfem: produtosFemininos})
+        res.render('homePage', { produtos: produtosMasculinos, produtosfem: produtosFemininos, logado})
     },
     faq: (req, res)=>{
-        res.render('faq')
+        //Lógica usuário logado
+        let logado = req.cookies.perfilUsuario
+        if(logado == undefined){
+            logado = false            
+        } 
+        res.render('faq', {logado})
     },
     cadastro: (req,res) => {
-        res.render('cadastro')
+        //Lógica usuário logado
+        let logado = req.cookies.perfilUsuario
+        if(logado == undefined){
+            logado = false            
+        } 
+        res.render('cadastro', {logado})
     },
     cadastroProdutos: (req,res) =>{
-        res.render('cadastroProdutos')
+        //Lógica usuário logado
+        let logado = req.cookies.perfilUsuario
+        if(logado == undefined){
+            logado = false            
+        } 
+        res.render('cadastroProdutos', {logado})
     },
     cadastroProdutosPost: (req,res) =>{
+       //Lógica usuário logado
+       let logado = req.cookies.perfilUsuario
+       if(logado == undefined){
+           logado = false            
+       } 
+
         const {validationResult} = require('express-validator')
 
         const produtos = req.body
@@ -39,16 +61,31 @@ const controllersPagina = {
     },
 
     cadastro: (req, res) => {
-        res.render('cadastro')
+        //Lógica usuário logado
+        let logado = req.cookies.perfilUsuario
+        if(logado == undefined){
+            logado = false            
+        } 
+        res.render('cadastro', {logado})
     },
 
-    login: (req,res) => {
-        res.render('login')
+    login: (req,res) => {        
+        //Lógica usuário logado
+        let logado = req.cookies.perfilUsuario
+        if(logado == undefined){
+            logado = false            
+        } 
+        
+        res.render('login', {logado})
     },
-
 
     produtos: (req, res) => {
-        res.render('produtos', { produtos: produtosMasculinos, produtosfem: produtosFemininos })
+        //Lógica usuário logado
+        let logado = req.cookies.perfilUsuario
+        if(logado == undefined){
+            logado = false            
+        } 
+        res.render('produtos', { produtos: produtosMasculinos, produtosfem: produtosFemininos, logado })
     }
 
 }

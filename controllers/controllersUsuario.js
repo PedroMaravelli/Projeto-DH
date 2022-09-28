@@ -67,6 +67,7 @@ const controllersUsuario = {
                 res.cookie('nomeUsuario',user.email)
                 req.session.idUser = user.id
                 req.session.usuario = user
+                res.cookie('perfilUsuario',user.nome)
                 console.log(user)
                 res.redirect('/')
                 return

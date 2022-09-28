@@ -16,7 +16,13 @@ checkout: (req,res) =>{
             totalProdutos += produto.quantidade*produto.preco
         }
 
-    res.render('checkout', { produtos: carrinho, totalProdutos:totalProdutos })
+        //Lógica usuário logado
+        let logado = req.cookies.perfilUsuario
+        if(logado == undefined){
+            logado = false            
+        }     
+
+    res.render('checkout', { produtos: carrinho, totalProdutos:totalProdutos, logado })
 },
 finalizaCarrinho: async (req,res) => {
     let {pais, estado, cidade, cep, rua, complemento, numero} = req.body

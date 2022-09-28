@@ -10,8 +10,13 @@ const controllerProduto = {
         })
         res.cookie('produtoVisualizado', produto[0], {maxAge: 500000})
 
+        //Lógica usuário logado
+        let logado = req.cookies.perfilUsuario
+        if(logado == undefined){
+            logado = false            
+        } 
         
-        res.render('produto', { produto })
+        res.render('produto', { produto, logado })
     }
 
     

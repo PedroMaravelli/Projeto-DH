@@ -5,14 +5,16 @@
             <p id="barra-divisoria">   |   </p>
             <p>lojagrupo7@camiseteria.com.br</p>            
         </div>
-        <div class="infos-right-menu-top" id="loginCadastro">            
-                <a href="../cadastro"><p>Cadastre-se</p></a>
-                <p id="barra-divisoria">   |   </p>            
-                <a href="../login"><p>Login</p></a>
-                <!-- <% if(typeof logado == undefined){ %> -->
-                <!-- <% } else { %>
+        <div class="infos-right-menu-top" id="loginCadastro">                            
+                <% if(logado != false){ %>
+                    <p>Olá, <%= logado %></p>
+                    <p id="barra-divisoria">   |   </p>
                     <a href="../perfil"><p>Ver Perfil</p></a>
-                <%}%> -->
+                <% } else { %>
+                    <a href="../cadastro"><p>Cadastre-se</p></a>
+                    <p id="barra-divisoria">   |   </p>            
+                    <a href="../login"><p>Login</p></a>
+                <%}%>
         </div>
         
     </nav>
