@@ -15,6 +15,9 @@ checkout: (req,res) =>{
         for (let produto of carrinho){            
             totalProdutos += produto.quantidade*produto.preco
         }
+        
+
+    
 
         //Lógica usuário logado
         let logado = req.cookies.perfilUsuario
