@@ -59,18 +59,21 @@
 			<article class="produtosCard">
 
 				<% for(let produto of produtos) { %>
+
 					<article class="elementosCards">
-							<div class="imagemProdutosCard">
-									<img src="./images/camiseta-branca.webp">
-							</div>
-							<div class="elementosCards">
-								<p><%= produto.nome %></p>
-								<p>R$<%= produto.valor %></p>
-							</div>
-							<a href="/carrinho"><button type="submit">COMPRAR</button></a>
-							
+						<div class="imagemProdutosCard">
+							<img src=<%=produto.imagem%>>
+						</div>
+						<div class="elementosCards">
+							<p><%=produto.nome%></p>
+							<p>R$ <%=produto.preco%>,00</p>
+						</div>
+						<% if(produto.quantidade == 0) {%>
+							<button id="produto-indisponivel">INDISPONÍVEL</button>
+						<%} else{%>	
+							<a href="/produto/<%=produto.SKU%>"><button type="submit">COMPRAR</button></a>
+						<% } %>
 					</article>
-						
 				<% } %>
 
 
@@ -79,37 +82,7 @@
 			</article>
 		</section>
 
-        <section class="tituloSecaoHome">
-            <button type="button"></button>
-            <h1>Roupas Femininas</h1>
-        </section>
-
-        <section class="cardsHome">
-            <article class="produtosCard">
-
-                <% for(let produto of produtosfem) { %>
-					<article class="elementosCards">
-							<div class="imagemProdutosCard">
-									<img src="./images/camiseta-fem-azul.jpg">
-							</div>
-							<div class="elementosCards">
-								<p><%= produto.nome %></p>
-								<p>R$<%= produto.valor %></p>
-							</div>
-							<a href="/carrinho"><button type="submit">COMPRAR</button></a>
-							
-					</article>
-						
-				<% } %>
-
-                
-
-    
-
-
-                    
-            </article>
-        </section>
+        
 
 
 

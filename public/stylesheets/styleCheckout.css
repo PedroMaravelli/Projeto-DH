@@ -53,14 +53,17 @@ main {
     margin-top: 12px;
     padding-right: 10px;
   }
-  input[type="text"], input[type="tel"], input[type="email"], select
+  input[type="text"], input[type="tel"], input[type="email"], input[type="number"],select
   {
     width: 70%;
     height: 30px;
     padding: 5px 10px;
     margin-bottom: 10px;
-    border: 1px solid #dadada;
     color: #000;
+    height: 50px;
+    background: #F3F1F1;
+    border-radius: 10px;
+    border: none;
   }
   select{
     width: 72%;
@@ -69,16 +72,17 @@ main {
     margin-bottom: 10px;
   }
   .Pedido{
+    display: flex;
+    flex-direction: column;
     margin-top: 15px;
     height: 600px;
     padding: 20px;
     border: 1px solid #dadada;
     align-content: center;
-  }
-  
+  }  
   table{
-    padding-left: 30%;
-    padding-right: 30%;
+    margin: auto;
+    margin-bottom: 0px;
   }
   th{
     border-bottom: 1px solid #dadada;
@@ -99,27 +103,28 @@ main {
   td#total-pedido{
     font-weight: 800;
   }
-
-
   .Pedido>div{
     padding: 5px 0; 
   }
   
   button{
-    width: 100%;
-    margin-top: 10px;
-    padding: 10px;
-    border: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    background: #6699FF;
+    height: 50px;
     border-radius: 10px;
-    background: #6699ff;
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: bold;
+    border: none;
+    font-family: 'Montserrat';
+    color: white;
   }
   button:hover{
     cursor: pointer;
-    background: #6699ff;
-  
+    background: #6699ff;  
 }
 
 footer section{

@@ -31,7 +31,13 @@ const controllersCarrinho = {
         for (let produto of carrinho){            
             totalProdutos += produto.quantidade*produto.preco
         }
-        res.render('carrinho', { carrinho: carrinho, totalProdutos:totalProdutos })
+
+        //Lógica usuário logado
+        let logado = req.cookies.perfilUsuario
+        if(logado == undefined){
+            logado = false            
+        } 
+        res.render('carrinho', { carrinho: carrinho, totalProdutos:totalProdutos, logado })
     },
     adicionaCarrinho: async (req, res) => {
 

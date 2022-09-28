@@ -186,6 +186,7 @@ body main .campo-formulario-cadastro#campo-linhaunica-senha button:hover{
     font-family: 'Montserrat';
     color: white;
     cursor: pointer;
+    font-size: 12px;
 }
 input{
     height: 50px;

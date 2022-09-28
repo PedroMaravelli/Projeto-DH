@@ -82,9 +82,9 @@
 								<p>R$ <%=produto.preco%>,00</p>
 							</div>
 							<% if(produto.quantidade == 0) {%>
-								<button id="produto-indisponivel">Indisponível</button>
+								<button id="produto-indisponivel">INDISPONÍVEL</button>
 							<%} else{%>	
-								<a href="/produto/<%=produto.SKU%>"><button type="submit">Comprar</button></a>
+								<a href="/produto/<%=produto.SKU%>"><button type="submit">COMPRAR</button></a>
 							<% } %>
 						</article>
 					<% } %>

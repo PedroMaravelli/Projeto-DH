@@ -5,8 +5,13 @@ const bcrypt = require('bcrypt')
 const controllersPerfilUsuario = {
     perfilUsuario: (req,res) => {
         
+        //Lógica usuário logado
+        let logado = req.cookies.perfilUsuario
+        if(logado == undefined){
+            logado = false            
+        } 
 
-        res.render('perfilUsuario',{usuario:req.session.usuario})
+        res.render('perfilUsuario',{usuario:req.session.usuario, logado})
     },
     updateSenha: async (req, res) =>{
         let {senha, confirmeSenha} = req.body

@@ -18,7 +18,13 @@ const controllersProdutos = {
         }
         produtos = novosProdutos
         
-        res.render('produtos', { produtos })
+        //Lógica usuário logado
+        let logado = req.cookies.perfilUsuario
+        if(logado == undefined){
+            logado = false            
+        } 
+
+        res.render('produtos', { produtos, logado })
     }
 }
 

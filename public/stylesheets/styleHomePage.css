@@ -48,8 +48,8 @@ main{
     margin-right: 7%;
     background-color: #6699ff;
     border: none;
+    padding: 10px;
 }
-
 
 .elementosCards{
     display: flex;
@@ -61,7 +61,7 @@ main{
     background-color: #6699ff;
     border-radius: 10px;
     color: white;
-    font-size: 18px;
+    font-size: 12px;
     border: none;
     width: 120px;
     height: 40px;
@@ -81,8 +81,15 @@ main{
     justify-content: space-around;
     
 }
+.elementosCards button#produto-indisponivel{
+    background-color: rgb(175, 175, 175);
+}
+.elementosCards button#produto-indisponivel:hover{
+    color: white;
+    cursor: default;
+}
 .imagemProdutosCard img{
-    width: 260px;
+    width: 220px;
     height: auto;
 }
 .containerpaicadastroemail{
