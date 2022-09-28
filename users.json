@@ -108,5 +108,115 @@
                     "telefone": "11965987634",
                     "senha": "12345",
                     "confirma_senha": "12345"
+          },
+          {
+                    "nome": "Pedro",
+                    "sobrenome": "Pinto",
+                    "email": "pedro@testefinal.com.br",
+                    "data_nascimento": "1990-07-06",
+                    "sexo": "masculino",
+                    "cpf": "35507394865",
+                    "telefone": "15991019346",
+                    "senha": "123456",
+                    "confirma_senha": "123456"
+          },
+          {
+                    "nome": "Pedro",
+                    "sobrenome": "Pinto",
+                    "email": "pedro@teste2.com.br",
+                    "data_nascimento": "1990-08-06",
+                    "sexo": "masculino",
+                    "cpf": "35507394865",
+                    "telefone": "15991019346",
+                    "senha": "123456",
+                    "confirma_senha": "123456"
+          },
+          {
+                    "nome": "Pedro",
+                    "sobrenome": "Pinto",
+                    "email": "pedro_km@hotmail.com",
+                    "data_nascimento": "1990-08-06",
+                    "sexo": "masculino",
+                    "cpf": "35507394865",
+                    "telefone": "15991019346",
+                    "senha": "123456",
+                    "confirma_senha": "123456"
+          },
+          {
+                    "nome": "Pedro",
+                    "sobrenome": "Pinto",
+                    "email": "pedro.shiroma.pinto@gmail.com",
+                    "data_nascimento": "1990-08-06",
+                    "sexo": "masculino",
+                    "cpf": "35507394865",
+                    "telefone": "15991019346",
+                    "senha": "123456",
+                    "confirma_senha": "123456"
+          },
+          {
+                    "nome": "Pedro",
+                    "sobrenome": "Pinto",
+                    "email": "pedro.shiroma.pinto@gmail.com",
+                    "data_nascimento": "1990-08-06",
+                    "sexo": "masculino",
+                    "cpf": "35507394865",
+                    "telefone": "15991019346",
+                    "senha": "123456",
+                    "confirma_senha": "123456"
+          },
+          {
+                    "nome": "Pedro",
+                    "sobrenome": "Pinto",
+                    "email": "pedro.shiroma.pinto@gmail.com",
+                    "data_nascimento": "1990-08-06",
+                    "sexo": "masculino",
+                    "cpf": "35507394865",
+                    "telefone": "15991019346",
+                    "senha": "123456",
+                    "confirma_senha": "123456"
+          },
+          {
+                    "nome": "Pedro",
+                    "sobrenome": "Pinto",
+                    "email": "pedro.shiroma.pinto@gmail.com",
+                    "data_nascimento": "1990-08-06",
+                    "sexo": "masculino",
+                    "cpf": "35507394865",
+                    "telefone": "15991019346",
+                    "senha": "123456",
+                    "confirma_senha": "123456"
+          },
+          {
+                    "nome": "Pedro",
+                    "sobrenome": "Pinto",
+                    "email": "pedrodh2@gmail.com",
+                    "data_nascimento": "1990-08-06",
+                    "sexo": "masculino",
+                    "cpf": "35507394865",
+                    "telefone": "15991019346",
+                    "senha": "123",
+                    "confirma_senha": "123"
+          },
+          {
+                    "nome": "Bruno",
+                    "sobrenome": "Ariel",
+                    "email": "bruno@dh.com.br",
+                    "data_nascimento": "1990-08-06",
+                    "sexo": "masculino",
+                    "cpf": "99999999999",
+                    "telefone": "15999999999",
+                    "senha": "123456",
+                    "confirma_senha": "123456"
+          },
+          {
+                    "nome": "Pedro",
+                    "sobrenome": "Pinto",
+                    "email": "pedro.shiroma.pinto@gmail.com",
+                    "data_nascimento": "1990-08-06",
+                    "sexo": "masculino",
+                    "cpf": "35507394865",
+                    "telefone": "15991019346",
+                    "senha": "123456",
+                    "confirma_senha": "123456"
           }
 ]

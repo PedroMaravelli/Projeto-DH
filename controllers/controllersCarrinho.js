@@ -33,7 +33,7 @@ const controllersCarrinho = {
         }
 
         //Lógica usuário logado
-        let logado = req.cookies.perfilUsuario
+        let logado = req.session.usuario
         if(logado == undefined){
             logado = false            
         } 

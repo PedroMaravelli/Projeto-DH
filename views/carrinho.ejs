@@ -43,7 +43,7 @@
                         <button type="submit">Esvaziar carrinho</button>
                     </form>
                     <section class="frete">
-                        <article class="freteValorDoPedido">
+                        <!-- <article class="freteValorDoPedido">
                             <div class="freteCarrinho">
                                 <form action="/carrinho" method="get">
                                     <label for="frete">FRETE</label>
@@ -55,12 +55,11 @@
                                         SEI
                                         MEU CEP</a>
                                 </div>
-                        </article>
+                        </article> -->
 
                         <article class="valorDoPedido">                            
-                            <div class="totalDoPedido">
-                                <h2>TOTAL</h2>                                
-                                <h2>R$ <%= totalProdutos %>,00</h2>
+                            <div class="totalDoPedido">                                                              
+                                <h2>TOTAL: R$ <%= totalProdutos %>,00</h2>
                             </div>
                             <a href="/checkout"><button type="button" id="buttonCarrinho">FINALIZAR PEDIDO</button></a>
                         </article>

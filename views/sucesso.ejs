@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <link rel="stylesheet" href="../stylesheets/styleCadastro.css">
+	<link rel="stylesheet" href="../stylesheets/styleHeader.css">
+    <link rel="stylesheet" href="../stylesheets/styleFaq.css">
+
+    <title>FAQ</title>
+</head>
+<body>
+	<%- include('./partials/header') %>
+    
+
+    <main>
+        
+        <section class="textoPrincipalFaq" id="div-sucesso">
+            <h1>PARABÉNS!</h1>
+        </section>
+        <section class="textoPrincipalFaq" id="div-sucesso">
+            <h2>Parabéns, <%= logado.nome%>! Pedido concluído com sucesso..</h2>
+            <img src="./images/pedido-concluido.jpg" alt="pedido-concluido" id="pedido-concluido">
+            <a href="./"><button id="sucesso">VOLTAR À HOME PAGE</button></a>       
+        </section>                
+    </main>
+
+	<%- include('./partials/footer') %>
+    
+    
+
+    
+</body>
+
+</html>
