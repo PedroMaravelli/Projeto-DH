@@ -7,17 +7,34 @@ const usersJson = require('../users.json')
 const bcrypt = require('bcrypt')
 const { validationResult } = require('express-validator')
 const cookie = require('cookie-parser')
+const { sequelize, Produto } = require('../database/models')
+
 
 const controllersPagina = {
 
-    home: (req, res) => {
+    home: async (req, res) => {
+
+        let produtos = await Produto.findAll()
+        
+        let exibeProdutos = []
+        let novosProdutos = []
+
+        for (let i = 0; i < produtos.length; i++){
+            if(exibeProdutos.includes(produtos[i].nome) == false){
+                
+                exibeProdutos.push(produtos[i].nome)
+                novosProdutos.push(produtos[i])
+            }
+        }
+        produtos = novosProdutos
+
         //Lógica usuário logado
         let logado = req.cookies.perfilUsuario
         if(logado == undefined){
             logado = false            
         } 
 
-        res.render('homePage', { produtos: produtosMasculinos, produtosfem: produtosFemininos, logado})
+        res.render('homePage', { produtos, logado})
     },
     faq: (req, res)=>{
         //Lógica usuário logado

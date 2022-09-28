@@ -22,7 +22,7 @@ checkout: (req,res) =>{
             logado = false            
         }     
 
-    res.render('checkout', { produtos: carrinho, totalProdutos:totalProdutos, logado })
+    res.render('checkout', { produtos: carrinho, totalProdutos:totalProdutos,logado })
 },
 finalizaCarrinho: async (req,res) => {
     let {pais, estado, cidade, cep, rua, complemento, numero} = req.body

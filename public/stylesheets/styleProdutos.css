@@ -85,6 +85,7 @@ body main section div button{
     border: none;
     border-radius: 2px;
     font-family: 'Montserrat';
+    font-size: 12px;
 }
 body main section.area-produtos-principal{
     display: flex;
@@ -105,6 +106,7 @@ body main section div.produtos-cards{
     margin-right: 7%;
     background-color: #6699ff;
     border: none;
+    font-size: 12px;
 }
 .elementosCards{
     display: flex;
@@ -122,6 +124,7 @@ body main section div.produtos-cards{
     width: 120px;
     height: 40px;
     margin-top: 5%;
+    font-size: 14px;
 }
 .elementosCards a:hover{
     cursor:pointer;

@@ -5,13 +5,11 @@ const bcrypt = require('bcrypt')
 const controllersPerfilUsuario = {
     perfilUsuario: (req,res) => {
         
-        let logado = ''
-        //Lógica usuário logado        
-        if(req.cookies.nomeUsuario == undefined){
+        //Lógica usuário logado
+        let logado = req.cookies.perfilUsuario
+        if(logado == undefined){
             logado = false            
-        } else{
-            logado = req.session.nomeUsuario
-        }        
+        } 
 
         res.render('perfilUsuario',{usuario:req.session.usuario, logado})
     },

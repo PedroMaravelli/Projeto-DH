@@ -22,23 +22,33 @@ main{
     align-items: center;
     justify-content: space-between;
     border-bottom: 5px solid #D9D9D9;
-    margin-bottom: 10%;
+    margin-bottom: 2%;
 }
 .titulo-botao h1{
     font-size: 36px;
     font-family: 'Montserrat';
 }
 .titulo-botao button{
-    font-family: 'Montserrat';
-    width: 200px;
-    height: 60px;
-    font-weight: bold;
+    width: 100%;
+    background: #6699FF;
+    height: 50px;
     border-radius: 10px;
-    font-size: 18px;
-    background-color:#6699ff ;
     border: none;
+    font-family: 'Montserrat';
+    color: white;
+    margin-bottom: 150px;
+    font-size: 12px;
 }
-
+.titulo-botao button:hover{
+    width: 100%;
+    background: #2a71ff;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Montserrat';
+    color: white;
+    cursor: pointer;
+}
 
 .produtosCarrinho{
     display: flex;
@@ -62,9 +72,14 @@ main{
     width: 100px;
     height: auto;
 }
+#imagemProdutoCard{
+    width: 350px;
+    height: auto;
+}
 .descricaoProduto{
     display: flex;
     flex-direction: column;
+    margin-top: 5%;
     margin-left: 5%;
     margin-right: 40%;
     font-size: 22px;
@@ -84,6 +99,7 @@ main{
     width: 100%;
     align-items: center;
     height: 300px;
+    margin-top: 50px;
     justify-content: space-between;
 }
 .freteCarrinho{
@@ -109,13 +125,25 @@ main{
 }
 #buttonCarrinho{
     margin-top: 10px;
-    width: 200px;
+    width: 100%;
+    background: #6699FF;
     height: 50px;
-    background-color: #6699ff;
-    font-size: 18px;
     border-radius: 10px;
     border: none;
-    font-weight: bold;
+    font-family: 'Montserrat';
+    color: white;
+    margin-bottom: 150px;
+    padding: 10px;
+}
+#buttonCarrinho:hover{
+    margin-top: 10px;
+    width: 100%;
+    background: #2a71ff;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Montserrat';
+    color: white;
     cursor: pointer;
 }
 .naoSeiMeuCep {
