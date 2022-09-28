@@ -15,6 +15,9 @@ checkout: (req,res) =>{
         for (let produto of carrinho){            
             totalProdutos += produto.quantidade*produto.preco
         }
+        
+
+    
 
     res.render('checkout', { produtos: carrinho, totalProdutos:totalProdutos })
 },
