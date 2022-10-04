@@ -17,6 +17,7 @@ router.get('/checkout',authCheckout, controllersCheckout.checkout)
 router.post('/pagamento', controllersCheckout.finalizaCarrinho)
 router.get('/login', controllersPagina.login)
 router.get('/faq', controllersPagina.faq)
+router.get('/sucesso', controllersPagina.sucesso)
 
 
 

@@ -14,7 +14,7 @@ const controllersPagina = {
 
     home: async (req, res) => {
 
-        let produtos = await Produto.findAll()
+        let produtos = await Produto.findAll({limit:3})
         
         let exibeProdutos = []
         let novosProdutos = []
@@ -29,7 +29,7 @@ const controllersPagina = {
         produtos = novosProdutos
 
         //Lógica usuário logado
-        let logado = req.cookies.perfilUsuario
+        let logado = req.session.usuario
         if(logado == undefined){
             logado = false            
         } 
@@ -38,7 +38,7 @@ const controllersPagina = {
     },
     faq: (req, res)=>{
         //Lógica usuário logado
-        let logado = req.cookies.perfilUsuario
+        let logado = req.session.usuario
         if(logado == undefined){
             logado = false            
         } 
@@ -46,7 +46,7 @@ const controllersPagina = {
     },
     cadastro: (req,res) => {
         //Lógica usuário logado
-        let logado = req.cookies.perfilUsuario
+        let logado = req.session.usuario
         if(logado == undefined){
             logado = false            
         } 
@@ -54,7 +54,7 @@ const controllersPagina = {
     },
     cadastroProdutos: (req,res) =>{
         //Lógica usuário logado
-        let logado = req.cookies.perfilUsuario
+        let logado = req.session.usuario
         if(logado == undefined){
             logado = false            
         } 
@@ -62,7 +62,7 @@ const controllersPagina = {
     },
     cadastroProdutosPost: (req,res) =>{
        //Lógica usuário logado
-       let logado = req.cookies.perfilUsuario
+       let logado = req.session.usuario
        if(logado == undefined){
            logado = false            
        } 
@@ -79,7 +79,7 @@ const controllersPagina = {
 
     cadastro: (req, res) => {
         //Lógica usuário logado
-        let logado = req.cookies.perfilUsuario
+        let logado = req.session.usuario
         if(logado == undefined){
             logado = false            
         } 
@@ -88,7 +88,7 @@ const controllersPagina = {
 
     login: (req,res) => {        
         //Lógica usuário logado
-        let logado = req.cookies.perfilUsuario
+        let logado = req.session.usuario
         if(logado == undefined){
             logado = false            
         } 
@@ -98,14 +98,20 @@ const controllersPagina = {
 
     produtos: (req, res) => {
         //Lógica usuário logado
-        let logado = req.cookies.perfilUsuario
+        let logado = req.session.usuario
         if(logado == undefined){
             logado = false            
         } 
         res.render('produtos', { produtos: produtosMasculinos, produtosfem: produtosFemininos, logado })
+    },
+    sucesso: (req, res) => {
+        //Lógica usuário logado
+        let logado = req.session.usuario
+        if(logado == undefined){
+            logado = false        
     }
-
+    res.render('sucesso',{logado})
 }
-
+}
 module.exports = controllersPagina
 

@@ -118,7 +118,40 @@ header nav div button{
     font-family: 'Montserrat';
     color: white;
 }
-
+button#sucesso{    
+    background: #6699FF;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Montserrat';
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 10px;
+    margin-top: 10px;
+}
+button#sucesso:hover{
+    width: 100%;
+    background: #2a71ff;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Montserrat';
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 10px;
+    margin-top: 10px;
+}
+#pedido-concluido{
+    height: 200px;
+    width: auto;
+}
+#div-sucesso{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
 
 @media (max-width:860px) {
     

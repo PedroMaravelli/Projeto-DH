@@ -6,7 +6,7 @@ const sobrenome = document.getElementById('last-name')
 const email = document.getElementById('email')
 const dataNascimento = document.getElementById('data-nascimento')
 const cpf = document.getElementById('cpf')
-const telefone = document.getElementById('telefone')
+const telefone = document.getElementById('telefoneForm')
 const senha = document.getElementById('senha')
 const confirmeSenha = document.getElementById('Confirmesenha')
 
@@ -51,12 +51,12 @@ form.addEventListener('submit', (event) => {
         errodataNascimento.innerHTML = `<p>Digite uma Data</p>`
         event.preventDefault()
     }
-    if(cpf.value == ''){
+    if(cpf.value == '' || cpf.value.length > 11){
         cpf.style.border = '1px solid red'
         errocpf.style.color = 'red'
-        errocpf.innerHTML = `<p>Digite um cpf</p>`
+        errocpf.innerHTML = `<p>Digite um cpf válido (somente números)</p>`
         event.preventDefault()
-    }
+    }  
     if(senha.value == ''){
         senha.style.border = '1px solid red'
         errosenha.style.color = 'red'
@@ -69,12 +69,11 @@ form.addEventListener('submit', (event) => {
         erroConfirmesenha.innerHTML = `<p>Confirme sua senha </p>`
         event.preventDefault()
     }
-    if(telefone.value == ''){
+    if(telefone.value == '' || telefone.value.length > 11){
         telefone.style.border = '1px solid red'
         errotelefone.style.color = 'red'
-        errotelefone.innerHTML = `<p>Digite um telefone </p>`
+        errotelefone.innerHTML = `<p>Digite somente números com DDD e sem o zero. Ex.: 15999999999</p>`
         event.preventDefault()
     }
-
 })
 

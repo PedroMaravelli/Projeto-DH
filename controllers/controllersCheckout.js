@@ -20,7 +20,7 @@ checkout: (req,res) =>{
     
 
         //Lógica usuário logado
-        let logado = req.cookies.perfilUsuario
+        let logado = req.session.usuario
         if(logado == undefined){
             logado = false            
         }     
@@ -95,7 +95,7 @@ finalizaCarrinho: async (req,res) => {
     let esvaziaCarrinho = []
     res.cookie('carrinho', esvaziaCarrinho)
 
-    res.redirect('/')
+    res.redirect('/sucesso')
 }
 }
 

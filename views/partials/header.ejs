@@ -7,7 +7,7 @@
         </div>
         <div class="infos-right-menu-top" id="loginCadastro">                            
                 <% if(logado != false){ %>
-                    <p>Olá, <%= logado %></p>
+                    <p>Olá, <%= logado.nome %></p>
                     <p id="barra-divisoria">   |   </p>
                     <a href="../perfil"><p>Ver Perfil</p></a>
                 <% } else { %>

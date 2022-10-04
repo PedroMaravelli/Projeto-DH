@@ -32,7 +32,8 @@ form.addEventListener('submit', (event) =>{
     if(cidade.value ==''){
         event.preventDefault()
     }
-    if(cep.value ==''){
+    if(cep.value =='' || cep.value.length > 8){
+        erroCep.innerHTML = `<p>Digite somente números. Ex.: XXXXXXXX</p>`
         event.preventDefault()
     }
     if(rua.value ==''){

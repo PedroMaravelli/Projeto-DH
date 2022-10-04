@@ -19,7 +19,7 @@ const controllersProdutos = {
         produtos = novosProdutos
         
         //Lógica usuário logado
-        let logado = req.cookies.perfilUsuario
+        let logado = req.session.usuario
         if(logado == undefined){
             logado = false            
         } 
